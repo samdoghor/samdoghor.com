@@ -41,6 +41,7 @@
                         <p class="font-bolder text-lg leading-normal font-merienda"> @samdoghor </p>
                     </div>
                     <div class="justify-self-center pt-2">
+                    
                         <!-- Social media links go here -->
                         <a href="https://www.github.com/samdoghor" target="_blank" class="pe-4"> <i class="pi pi-github"
                                 style="font-size: 1rem"></i>
@@ -66,9 +67,10 @@
         </div>
     </div>
 </template>
-
+  
 <script>
 export default {
     name: 'Home',
 };
 </script>
+

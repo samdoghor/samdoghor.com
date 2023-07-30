@@ -15,9 +15,7 @@
 
         </nav>
         <div class="border grid min-h-[80vh]">
-
-
-
+            
             <div class="flex justify-center pt-16 pb-1">
                 <img class="rounded-full max-w-[20%]" alt="Samuel Doghor" src="../src/assets/images/doghs.jpg" />
             </div>

@@ -7,6 +7,7 @@
   
 <script>
 import Header from './components/Header.vue';
+import 'primeicons/primeicons.css';
 
 export default {
     components: {

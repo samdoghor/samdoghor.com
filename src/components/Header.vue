@@ -16,7 +16,6 @@
   
 <script>
 import navLinks from '../assets/data/home';
-import 'primeicons/primeicons.css';
 
 export default {
     data() {

@@ -1,5 +1,13 @@
 <template>
     <div>
-        Courses        
+        Courses
     </div>
 </template>
+
+<script>
+export default {
+    name: 'Course',
+    components: {
+    }
+}
+</script>

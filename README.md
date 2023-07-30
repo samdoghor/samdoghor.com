@@ -14,17 +14,11 @@ We recommend the following IDE setup for the best development experience:
 
 ## Project Description
 
-### Introduction
+### Live
 
-Hello, my name is Samuel, Doghor Destiny. I'm an enthusiastic backend web developer, a tech enthusiast, and a WordPress maestro. I have a passion for learning and constantly seek captivating opportunities to enhance my frontend and software engineering skills. Currently, I am undergoing training at Andela and ALX-Africa, where I'm diving deep into the world of frontend development and software engineering.
+[Website](https://app.samdoghor.com)
 
-### Location
-
-I am based in the vibrant country of Nigeria, where the tech industry is thriving and constantly evolving. Being part of the tech community here has been an exciting and fulfilling journey.
-
-### Blog Posts
-
-I love sharing my tech journey and knowledge with the community through engaging blog posts. You can find my blog at [Vivirgros](https://vivirgros.com/), a platform where creativity knows no bounds.
+![Website](src/assets/images/portfolio.png)
 
 ### Contact Me
 

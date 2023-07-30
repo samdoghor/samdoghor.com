@@ -1,4 +1,4 @@
-const navLinks = [
+const header = [
   {
     id: 1,
     name: "Bio",
@@ -18,4 +18,4 @@ const navLinks = [
     type: "router-link",
   },
 ];
-export default navLinks;
+export default header;

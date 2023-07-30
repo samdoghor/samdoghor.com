@@ -13,15 +13,15 @@
                 </div>
 
                 <!-- Left Column (Order 2 on tablet and mobile) -->
-                <div class="col-span-1 lg:col-span-2 lg:order-1">
+                <div class="col-span-1 lg:col-span-2 lg:order-1 overflow-hidden">
                     <!-- Centered content -->
-                    <div class="justify-self-center pt-1">
-                        <p class="font-bolder text-3xl leading-normal font-caveat">My name is, </p>
+                    <div class="justify-self-center pt-1 pe-4 lg:pe-32">
+                        <p class="font-bolder text-3xl leading-normal font-caveat text-center">My name is, </p>
                     </div>
                     <div class="justify-self-center pt-1 pe-4 lg:pe-32">
-                        <p class="font-bold text-6xl leading-snug font-lilitaOne">Samuel, Doghor Destiny.</p>
+                        <p class="font-bold text-6xl leading-snug font-lilitaOne text-center">Samuel, Doghor Destiny.</p>
                     </div>
-                    <div class="justify-self-center py-10 pe-4 lg:pe-32">
+                    <div class="justify-self-center py-10 pe-4 lg:pe-32 overflow-hidden">
                         <p class="font-bold text-xl leading-loose tracking-wider font-poiretone lg:text-justify">
                             I'm an avid backend web developer, a tech enthusiast, and a WordPress maestro. Embracing the
                             thrill of learning, I'm currently embarking on captivating frontend and software engineering
@@ -40,7 +40,7 @@
                     <div class="justify-self-center pt-2">
                         <p class="font-bolder text-lg leading-normal font-merienda"> @samdoghor </p>
                     </div>
-                    <div class="justify-self-center pt-2">
+                    <div class="justify-self-center pt-2 overflow-hidden">
 
                         <!-- Social media links go here -->
                         <a href="https://www.github.com/samdoghor" target="_blank" class="pe-4"> <i class="pi pi-github"

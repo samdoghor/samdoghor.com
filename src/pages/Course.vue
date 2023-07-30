@@ -3,13 +3,13 @@
         <div class="border grid min-h-[80vh]">
 
             <div class="flex justify-center pt-16 pb-1">
-                <img class="rounded-full max-w-[20%]" alt="Samuel Doghor" src="../assets/images/doghs.jpg" />
+                <img class="rounded-full max-w-[80%]" alt="Samuel Doghor" src="../assets/images/doghs.jpg" />
             </div>
             <div class="justify-self-center pt-4">
                 <span class="font-bold text-lg text-cyan-600"> Course Page </span>
             </div>
-            <div class="justify-self-center pt-1">
-                <span class="font-bold text-6xl"> Coming Soon ! </span>
+            <div class="justify-self-center py-4 overflow-hidden text-center">
+                <span class="font-bold text-6xl text-center"> Coming Soon ! </span>
             </div>
             <div class="justify-self-center pb-16 pt-6">
                 <a class="font-normal text-l" href="https://www.app.samdoghor.com" target="_blank"> Click here to view

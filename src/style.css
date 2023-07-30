@@ -3,3 +3,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: .4em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(66, 66, 66, 0.6);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #424242;
+  outline: .1px solid #424242;
+}

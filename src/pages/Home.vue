@@ -1,17 +1,28 @@
 <template>
+    <!-- The outer div is flex to horizontally center the content -->
     <div class="overflow-y-hidden flex justify-center my-10">
-        <div class="border-2 border-black p-8 flex flex-col max-w-[85vw] overflow-hidden">
-            <!-- Add overflow-hidden here -->
-            <div class="grid grid-cols-3">
-                <div class="col-span-2">
+        <!-- The inner div is a container with borders and padding -->
+        <div class="border-2 border-black p-4 lg:p-8 flex flex-col max-w-[85vw] overflow-hidden">
+            <!-- The grid container with 3 columns -->
+            <div class="grid lg:grid-cols-3">
+                <!-- Right Column (Order 1 on tablet and mobile) -->
+                <div class="col-span-2 lg:col-span-1 lg:order-2 pb-10 lg:pb-0">
+                    <!-- Centered image -->
+                    <img src="../assets/images/doghs.jpg"
+                        class="relative w-full md:w-80 lg:w-full h-full object-cover rounded-full lg:rounded-none mx-auto">
+                </div>
+
+                <!-- Left Column (Order 2 on tablet and mobile) -->
+                <div class="col-span-1 lg:col-span-2 lg:order-1">
+                    <!-- Centered content -->
                     <div class="justify-self-center pt-1">
                         <p class="font-bolder text-3xl leading-normal font-caveat">My name is, </p>
                     </div>
-                    <div class="justify-self-center pt-1 pe-32">
+                    <div class="justify-self-center pt-1 pe-4 lg:pe-32">
                         <p class="font-bold text-6xl leading-snug font-lilitaOne">Samuel, Doghor Destiny.</p>
                     </div>
-                    <div class="justify-self-center py-10 pe-32">
-                        <p class="font-normal text-lg leading-relaxed font-poiretone text-justify">
+                    <div class="justify-self-center py-10 pe-4 lg:pe-32">
+                        <p class="font-normal text-lg leading-relaxed font-poiretone lg:text-justify">
                             I'm an avid backend web developer, a tech enthusiast, and a WordPress maestro. Embracing the
                             thrill of learning, I'm currently embarking on captivating frontend and software engineering
                             training at <a href="https://andela.com/" target="_blank" class="underline underline-offset-4">
@@ -30,6 +41,8 @@
                         <p class="font-bolder text-lg leading-normal font-merienda"> @samdoghor </p>
                     </div>
                     <div class="justify-self-center pt-2">
+                    
+                        <!-- Social media links go here -->
                         <a href="https://www.github.com/samdoghor" target="_blank" class="pe-4"> <i class="pi pi-github"
                                 style="font-size: 1rem"></i>
                         </a>
@@ -50,9 +63,6 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-span-1">
-                    <img src="../assets/images/doghs.jpg" class="relative w-full h-full object-cover">
-                </div>
             </div>
         </div>
     </div>
@@ -63,4 +73,4 @@ export default {
     name: 'Home',
 };
 </script>
-  
+

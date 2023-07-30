@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex justify-around space-x-4">
+    <nav class="flex justify-around lg:space-x-4">
         <router-link v-for="links in navlinks" :key="links.id" :to="links.link"
             class="rounded-lg px-3 py-2 text-slate-700 font-bold hover:bg-slate-100 hover:text-slate-900 font-lobstertwo text-lg">
             <span>{{ links.name }}</span>

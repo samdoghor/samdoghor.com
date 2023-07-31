@@ -3,7 +3,8 @@
         <div class="border grid min-h-[80vh]">
 
             <div class="flex justify-center pt-16 pb-1">
-                <img class="rounded-full max-w-[80%]" alt="Samuel Doghor" src="../assets/images/doghs.jpg" />
+                <img class="rounded-full max-w-[80%] md:max-w-[60%] lg:max-w-[20%]" alt="Samuel Doghor"
+                    src="../assets/images/doghs.jpg" />
             </div>
             <div class="justify-self-center pt-4">
                 <span class="font-bold text-lg text-cyan-600"> Course Page </span>

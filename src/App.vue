@@ -1,8 +1,11 @@
 <template>
-    <div class="max-w-[100vw] min-h-[100vh] mx-auto bg-gradient-to-r from-white via-zinc-200 to-white py-10">
-        <Header />
-        <router-view />
-        <Footer />
+    <div
+        class="max-w-[100vw] min-h-[80vh] mx-auto bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 p-10 flex justify-center overflow-hidden">
+        <div class="border-4 border-white overflow-hidden">
+            <Header />
+            <router-view />
+            <Footer />
+        </div>
     </div>
 </template>
   

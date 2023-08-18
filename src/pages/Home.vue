@@ -1,6 +1,8 @@
 <template>
     <!-- The outer div is flex to horizontally center the content -->
+
     <div class="overflow-y-hidden flex justify-center m-4 md:m-10">
+n
         <!-- The inner div is a container with borders and padding -->
         <div class="">
             <!-- The grid container with 3 columns -->
@@ -16,6 +18,7 @@
                 <div class="col-span-1 lg:col-span-2 lg:order-1 overflow-hidden">
                     <!-- Centered content -->
                     <div class="justify-self-center pt-1 pe-4 lg:pe-32">
+
                         <p class="font-bolder text-3xl leading-normal font-caveat text-white">My name is, </p>
                     </div>
                     <div class="justify-self-center pt-1 pe-4 lg:pe-32">
@@ -24,6 +27,7 @@
                     </div>
                     <div class="justify-self-center py-10 pe-4 lg:pe-32 overflow-hidden text-white">
                         <p class="font-normal text-xl leading-loose tracking-wider font-ysabeauoffice lg:text-justify">
+
                             I'm an avid backend web developer, a tech enthusiast, and a WordPress maestro. Embracing the
                             thrill of learning, I'm currently embarking on captivating frontend and software engineering
                             training at <a href="https://andela.com/" target="_blank" class="underline underline-offset-4">

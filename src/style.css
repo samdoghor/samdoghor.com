@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=Lobster+Two&family=Merienda:wght@300&family=Open+Sans:wght@400;500;600;700&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=Lobster+Two&family=Merienda:wght@300&family=Open+Sans:wght@400;500;600;700&family=Poiret+One&family=Changa&family=Ysabeau+Office&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Ysabeau+Office&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -14,10 +16,14 @@ body::-webkit-scrollbar {
 }
  
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(66, 66, 66, 0.6);
+
+  box-shadow: inset 0 0 6px rgba(6, 18, 51, 0.6);
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #424242;
-  outline: .1px solid #424242;
+  background-color: #061233;
+  outline: .1px solid #061233;
 }
+
+
+

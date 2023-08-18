@@ -9,6 +9,8 @@ export default {
         lobstertwo: ["Lobster Two", "cursive"],
         poiretone: ["Poiret One", "cursive"],
         merienda: ["Merienda", "cursive"],
+        ysabeauoffice: ["Ysabeau Office", "sans-serif"],
+        changa: ['Changa', 'sans-serif']
       },
     },
   },

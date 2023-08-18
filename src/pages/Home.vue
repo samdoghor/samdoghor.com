@@ -1,6 +1,8 @@
 <template>
     <!-- The outer div is flex to horizontally center the content -->
-    <div class="overflow-y-hidden flex justify-center m-10">
+
+    <div class="overflow-y-hidden flex justify-center m-4 md:m-10">
+n
         <!-- The inner div is a container with borders and padding -->
         <div class="">
             <!-- The grid container with 3 columns -->
@@ -16,26 +18,28 @@
                 <div class="col-span-1 lg:col-span-2 lg:order-1 overflow-hidden">
                     <!-- Centered content -->
                     <div class="justify-self-center pt-1 pe-4 lg:pe-32">
-                        <p class="font-bolder text-3xl leading-normal font-caveat text-center text-white">My name is, </p>
+
+                        <p class="font-bolder text-3xl leading-normal font-caveat text-white">My name is, </p>
                     </div>
                     <div class="justify-self-center pt-1 pe-4 lg:pe-32">
-                        <p class="font-bold text-6xl leading-snug font-lilitaOne text-center text-white">Samuel, Doghor
+                        <p class="font-bold text-6xl leading-snug font-lilitaOne text-white">Samuel, Doghor
                             Destiny.</p>
                     </div>
                     <div class="justify-self-center py-10 pe-4 lg:pe-32 overflow-hidden text-white">
-                        <p class="font-bold text-xl leading-loose tracking-wider font-poiretone lg:text-justify">
+                        <p class="font-normal text-xl leading-loose tracking-wider font-ysabeauoffice lg:text-justify">
+
                             I'm an avid backend web developer, a tech enthusiast, and a WordPress maestro. Embracing the
                             thrill of learning, I'm currently embarking on captivating frontend and software engineering
                             training at <a href="https://andela.com/" target="_blank" class="underline underline-offset-4">
                                 Andela
                             </a> and <a href="https://alxafrica.com/" target="_blank" class="underline underline-offset-4">
-                                ALX-Africa
-                            </a>. I am based in vibrant Nigeria, I
+                                ALX-Africa</a>, respectively. I am based in vibrant Nigeria, I
                             also enjoy sharing my tech
                             journey through engaging blog posts. Proud founder of <a href="https://vivirgros.com/"
                                 target="_blank" class="underline underline-offset-4"> Vivirgros</a>, where creativity knows
                             no
-                            bounds.
+                            bounds. <a href="https://app.samdoghor.com/" target="_blank"
+                                class="underline underline-offset-4"> See my Portfolio</a>
                         </p>
                     </div>
                     <div class="justify-self-center pt-2 text-white">

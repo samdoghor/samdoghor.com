@@ -2,7 +2,7 @@
     <!-- The outer div is flex to horizontally center the content -->
 
     <div class="overflow-y-hidden flex justify-center m-4 md:m-10">
-n
+        n
         <!-- The inner div is a container with borders and padding -->
         <div class="">
             <!-- The grid container with 3 columns -->
@@ -17,7 +17,7 @@ n
                 <!-- Left Column (Order 2 on tablet and mobile) -->
                 <div class="col-span-1 lg:col-span-2 lg:order-1 overflow-hidden">
                     <!-- Centered content -->
-                    <div class="justify-self-center pt-1 pe-4 lg:pe-32">
+                    <div class="justify-self-center pt-1 pe-4 lg:pe-32 text-center">
 
                         <p class="font-bolder text-3xl leading-normal font-caveat text-white">My name is, </p>
                     </div>

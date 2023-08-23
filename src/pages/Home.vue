@@ -35,10 +35,7 @@
                             </a> and <a href="https://alxafrica.com/" target="_blank" class="underline underline-offset-4">
                                 ALX-Africa</a>, respectively. I am based in vibrant Nigeria, I
                             also enjoy sharing my tech
-                            journey through engaging blog posts. Proud founder of <a href="https://vivirgros.com/"
-                                target="_blank" class="underline underline-offset-4"> Vivirgros</a>, where creativity knows
-                            no
-                            bounds. <a href="https://app.samdoghor.com/" target="_blank"
+                            journey through engaging blog posts. <a href="https://app.samdoghor.com/" target="_blank"
                                 class="underline underline-offset-4"> See my Portfolio</a>
                         </p>
                     </div>

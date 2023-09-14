@@ -1,14 +1,13 @@
 <template>
     <!-- The outer div is flex to horizontally center the content -->
 
-    <div class="overflow-y-hidden flex justify-center m-4 md:m-10">
-        n
+    <div class="overflow-y-hidden flex justify-center m-4 md:m-6">
         <!-- The inner div is a container with borders and padding -->
         <div class="">
             <!-- The grid container with 3 columns -->
             <div class="grid lg:grid-cols-3">
                 <!-- Right Column (Order 1 on tablet and mobile) -->
-                <div class="col-span-2 lg:col-span-1 lg:order-2 pb-10 lg:pb-0">
+                <div class="col-span-2 lg:col-span-1 lg:order-2 pb-10 lg:pb-0 border-white border-8">
                     <!-- Centered image -->
                     <img src="../assets/images/doghs.jpg"
                         class="relative w-full md:w-80 lg:w-full h-full object-cover rounded-full lg:rounded-none mx-auto">

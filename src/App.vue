@@ -1,7 +1,6 @@
 <template>
     <div
-
-        class="max-w-[100vw] min-h-[80vh] mx-auto bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 p-4 md:p-10 flex justify-center overflow-hidden">
+        class="max-w-[100vw] min-h-[80vh] mx-auto bg-gradient-to-r from-cyan-950 via-cyan-900 to-cyan-950 p-4 md:p-10 flex justify-center overflow-hidden">
 
         <div class="border-4 border-white overflow-hidden">
             <Header />

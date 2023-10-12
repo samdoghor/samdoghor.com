@@ -28,11 +28,9 @@
                         <p class="font-normal text-xl leading-loose tracking-wider font-ysabeauoffice lg:text-justify">
 
                             I'm an avid backend web developer, a tech enthusiast, and a WordPress maestro. Embracing the
-                            thrill of learning, I'm currently embarking on captivating frontend and software engineering
-                            training at <a href="https://andela.com/" target="_blank" class="underline underline-offset-4">
-                                Andela
-                            </a> and <a href="https://alxafrica.com/" target="_blank" class="underline underline-offset-4">
-                                ALX-Africa</a>, respectively. I am based in vibrant Nigeria, I
+                            thrill of learning, I'm currently embarking on software engineering
+                            training at <a href="https://alxafrica.com/" target="_blank" class="underline underline-offset-4">
+                                ALX-Africa</a>. I am based in vibrant Nigeria, I
                             also enjoy sharing my tech
                             journey through engaging blog posts. <a href="https://app.samdoghor.com/" target="_blank"
                                 class="underline underline-offset-4"> See my Portfolio</a>

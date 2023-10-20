@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Caveat&family=Chakra+Petch:wght@300&family=Genos:wght@300&family=Hubballi&family=Nova+Mono&family=Ubuntu:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: .4em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #09090b;
+  outline: .1px solid #09090b;
+}
+
+.navy {
+  width: 80vw;
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 8;
+  width: 80vw;
+  z-index: 888 !important;
+  overflow-y: hidden;
+  background-color: rgba(9, 9, 11, 0.95);
+  transition: 1s;
+}
+.sticky-nav .dropdown-menu-o {
+  z-index: 999 !important;
+  position: fixed;
+  display: block;
+  right: 12%;
+  border-radius: 5px;
+  background-color: white;
+  padding: 2px;
+  transition: 1s;
+}
+.ontop {
+  z-index: 2;
+  transition: 1s;
+}
+.ontop-2x {
+  z-index: 4;
+  transition: 1s;
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 9999;
+  font-size: 2em;
+  transition: .6s;
+}
+
+.scroll-to-top-button.visible {
+  display: block;
+  animation: rotate360 2s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.scroll-to-top-button.visible:hover {
+  font-size: 1.9em;
+  animation: rotate360 2s linear;
+}

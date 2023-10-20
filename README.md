@@ -1,58 +1,27 @@
-# Personal Web Page
+# Hi there 👋🏿
 
-Built Vue 3 + Vite Template, Tailwind and deployed to Vercel.
+This is my personal portfolio
 
-This template should help you get started developing with Vue 3 using Vite. The template makes use of Vue 3's `<script setup>` SFCs, which provide a more concise and streamlined syntax for script blocks. To learn more about `<script setup>`, check out the [script setup documentation](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup).
+## Live
 
-## Recommended IDE Setup
+[My Portfolio](https://app.samdoghor.com)
 
-We recommend the following IDE setup for the best development experience:
+Built with [Vite-React](https://vitejs.dev/), [Three JS](https://threejs.org/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend with [Vercel](https://vercel.com/) while backend & Database with [Render](https://render.com/).
 
-- [VS Code](https://code.visualstudio.com/)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Disable Vetur if installed)
-- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+![My Portfolio](frontend/public/img/portfolio.png)
 
-## Project Description
+## Access to my main page and blog
 
-### Live
+[Samuel, Doghor](https://samdoghor.com) - website
 
-[Website](https://app.samdoghor.com)
+[Samuel, Doghor](https://github.com/samdoghor/samdoghor-front-page) - Repo -> Built with Vue, & Tailwind
 
-![Website](src/assets/images/portfolio.png)
+## Connect with me
 
-### Contact Me
+[![Instagram Badge](https://img.shields.io/badge/-samdoghor-%09%23483D8B?style=for-the-badge&logo=instagram&logoColor=white&link=https://instagram.com/samdoghor)](https://instagram.com/samdoghor)
+[![Twitter Badge](https://img.shields.io/badge/-samdoghor-%09%23483D8B?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/samdoghor)](https://twitter.com/samdoghor)
+[![Linkedin Badge](https://img.shields.io/badge/-samdoghor-%09%23483D8B?style=for-the-badge&logo=linkedin&logoColor=white&link=https://linkedin.com/in/samdoghor)](https://linkedin.com/in/samdoghor)
 
-You can find me on social media and other platforms:
+## Attribution
 
-- Twitter: [@samdoghor](https://www.twitter.com/samdoghor)
-- GitHub: [github.com/samdoghor](https://www.github.com/samdoghor)
-- Instagram: [instagram.com/samdoghor](https://www.instagram.com/samdoghor)
-- LinkedIn: [linkedin.com/in/samdoghor](https://www.linkedin.com/in/samdoghor)
-- WhatsApp: [wa.me/qr/CGHZ23GBYBKLC1](https://wa.me/qr/CGHZ23GBYBKLC1)
-- Email: [talkto@samdoghor.com](mailto:talkto@samdoghor.com)
-
-## Getting Started
-
-Follow these steps to get started with the project:
-
-- Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/samdoghor/samdoghor-front-page
-```
-
-- Install the dependencies using your package manager:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-- Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
+Inspired by [Segun Adebayo](https://github.com/segunadebayo/adebayosegun.com)

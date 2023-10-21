@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
   width: 80vw;
   z-index: 888 !important;
   overflow-y: hidden;
-  background-color: rgba(9, 9, 11, 0.95);
+  background-color: rgba(9, 9, 11, 0.836);
   transition: 1s;
 }
 .sticky-nav .dropdown-menu-o {
@@ -95,6 +95,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scroll-to-top-button.visible:hover {
-  font-size: 1.9em;
+  font-size: 1.5em;
   animation: rotate360 2s linear;
 }

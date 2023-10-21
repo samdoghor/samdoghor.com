@@ -4,8 +4,8 @@ const Testimonies = () => {
   return (
     <>
       <div>
-        {TestimoniesData.map((d) => (
-          <div key={d.id}> {d.id} </div>
+        {TestimoniesData.map((d, index) => (
+          <div key={index}> {d.id} </div>
         ))}
       </div>
     </>

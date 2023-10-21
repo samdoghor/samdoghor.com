@@ -4,13 +4,13 @@ const Service = () => {
   return (
     <>
       <div
-        className="w-full grid lg:grid-cols-3 pt-24 lg:pt-32 mt-28 min-h-full"
+        className="w-full grid lg:grid-cols-3 pt-16 lg:pt-32 mt-10 min-h-full"
         id="services"
       >
-        <div className="col-span-2" data-aos="fade-right">
+        <div className="col-span-2">
           <div>
-            {ServiceData.map((d) => (
-              <div key={d.id}>
+            {ServiceData.map((d, index) => (
+              <div key={index}>
                 <p className="flex pb-4 items-center">
                   <img
                     className="rounded-full w-28 block"
@@ -28,12 +28,12 @@ const Service = () => {
             ))}
           </div>
         </div>
-        <div className="w-full mt-8" data-aos="fade-left">
+        <div className="w-full mt-8">
           <div>
             <div>
-              {ServiceData.map((d) => (
+              {ServiceData.map((d, index) => (
                 <p
-                  key={d.id}
+                  key={index}
                   className="text-xl md:text-2xl text-white leading-loose"
                 >
                   {d.service}
@@ -41,12 +41,12 @@ const Service = () => {
               ))}
             </div>
             <div className="grid grid-cols-2 grid-rows-2 mt-6">
-              {headerSocialData.map((d) => (
-                <div key={d.id}>
+              {headerSocialData.map((d, index) => (
+                <div key={index}>
                   <a
                     className="flex text-lg text-primary-logo items-center gap-2 mt-6"
                     href={d.link}
-                    key={d.id}
+                    key={index}
                     target="_blank"
                     rel="noreferrer"
                   >

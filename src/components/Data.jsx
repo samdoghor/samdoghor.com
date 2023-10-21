@@ -7,7 +7,6 @@ import {
   FaLink,
   FaGitAlt,
   FaPython,
-  FaExternalLinkAlt,
   FaVuejs,
   FaUbuntu,
 } from "react-icons/fa";
@@ -45,43 +44,31 @@ export const headerLogoData = [
     id: 1,
     logo: "<SD/>",
     name: "source code",
-    link: "https://github.com/samdoghor/samdoghor-portfolio",
-    link2: "#header",
+    link: "https://github.com/samdoghor/samdoghor.com",
+    link2: "/",
   },
 ];
 
 export const headerNavData = [
   {
     id: 1,
-    nav: "Home/Blog",
-    icon: <FaExternalLinkAlt />,
-    link: "https://www.samdoghor.com",
-    target: "_blank",
+    nav: "Portfolio",
+    link: "/",
   },
   {
     id: 2,
-    nav: "[Intro]",
-    link: "#intro",
+    nav: "Blog",
+    link: "/blog",
   },
   {
     id: 3,
-    nav: "[Services]",
-    link: "#services",
+    nav: "Courses",
+    link: "/courses",
   },
   {
     id: 4,
-    nav: "[Projects]",
-    link: "#projects",
-  },
-  {
-    id: 5,
-    nav: "[Stack]",
-    link: "#stack",
-  },
-  {
-    id: 6,
-    nav: "[Contact]",
-    link: "#contact",
+    nav: "Contact",
+    link: "/contact",
   },
 ];
 
@@ -116,8 +103,7 @@ export const HeroData = [
   {
     id: 1,
     name: "Samuel, Doghor",
-    stack: "Backend Engineer",
-    text: "I also play around with frontend.",
+    stack: "Software Engineer",
     code1: (
       <Typewriter
         loop={true}
@@ -169,6 +155,19 @@ export const ProjectData = [
 export const ProjectDData = [
   {
     id: 1,
+    Title: "Myte",
+    GitHub: "https://github.com/samdoghor/myte",
+    githubi: <FaGithub />,
+    labelg: "Github",
+    Website: "#",
+    websitei: <FaLink />,
+    labelw: "Website",
+    Description:
+      "Myte is a simple command-line tool for creating boilerplate code for python web projects. It simplifies the project setup process by providing a user-friendly interface to choose the project name, framework, and setup complexity.",
+    Image: "/img/myte.png",
+  },
+  {
+    id: 2,
     Title: "Nigerian Food Database API",
     GitHub: "https://github.com/samdoghor/NG-food-DB-APIs",
     githubi: <FaGithub />,
@@ -181,7 +180,7 @@ export const ProjectDData = [
     Image: "/img/ng-food=db-api.png",
   },
   {
-    id: 2,
+    id: 3,
     Title: "Gomerce",
     GitHub: "https://github.com/samdoghor/GomerceBE",
     githubi: <FaGithub />,

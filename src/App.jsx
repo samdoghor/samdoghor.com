@@ -1,7 +1,7 @@
 import { Header, Footer, ScrollToTop } from "./Index";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Router from "./Router";
+import Routers from "./Routers";
 // import Galaxy from "./Galaxy";
 
 AOS.init();
@@ -14,7 +14,7 @@ const App = () => {
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />
-        <Router />
+        <Routers />
         <Footer />
         <ScrollToTop />
       </div>

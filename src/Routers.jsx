@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Portfolio, Blog, Courses, ContactForm, NotFound } from "./Index";
 
-const Router = () => {
+const Routers = () => {
   return (
     <Routes>
       <Route path="/" element={<Portfolio />} />
@@ -13,4 +13,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default Routers;

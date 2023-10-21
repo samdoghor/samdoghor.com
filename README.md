@@ -1,20 +1,15 @@
 # Hi there 👋🏿
 
-This is my personal portfolio
+This is my personal portfolio/website
 
 ## Live
 
-[My Portfolio](https://app.samdoghor.com)
+[Samuel, Doghor](https://samdoghor.com) - website
 
 Built with [Vite-React](https://vitejs.dev/), [Three JS](https://threejs.org/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend with [Vercel](https://vercel.com/) while backend & Database with [Render](https://render.com/).
 
-![My Portfolio](frontend/public/img/portfolio.png)
-
-## Access to my main page and blog
-
-[Samuel, Doghor](https://samdoghor.com) - website
-
-[Samuel, Doghor](https://github.com/samdoghor/samdoghor-front-page) - Repo -> Built with Vue, & Tailwind
+<!-- ![My Portfolio](frontend/public/img/portfolio.png) -->
+![Alt text](image.png)
 
 ## Connect with me
 

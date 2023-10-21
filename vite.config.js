@@ -7,4 +7,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ["three"], // Tell Vite to optimize the "three" package
   },
+  server: {
+    host: "0.0.0.0"
+  }
 });

@@ -56,13 +56,13 @@ const Project = () => {
   return (
     <>
       <div
-        className="w-full pt-28 lg:pt-32 min-h-full overflow-hidden mt-28"
+        className="w-full pt-16 lg:pt-32 min-h-full overflow-hidden mt-10"
         id="projects"
       >
-        <div data-aos="flip-down">
-          {ProjectData.map((d) => (
+        <div>
+          {ProjectData.map((d, index) => (
             <p
-              key={d.id}
+              key={index}
               className="text-primary-cylogo font-semibold text-6xl overflow-hidden leading-snug md:leading-normal"
             >
               {d.text}

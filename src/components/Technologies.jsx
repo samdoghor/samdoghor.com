@@ -3,13 +3,10 @@ import { TechnologiesData, TechnologiesDData } from "./Data";
 const Technologies = () => {
   return (
     <>
-      <div
-        className="w-full pt-28 lg:pt-32 min-h-full overflow-hidden mt-28"
-        id="stack"
-      >
-        <div data-aos="flip-down">
-          {TechnologiesData.map((d) => (
-            <div key={d.id}>
+      <div className="w-full pt-10 min-h-full overflow-hidden mt-10" id="stack">
+        <div>
+          {TechnologiesData.map((d, index) => (
+            <div key={index}>
               <p className="text-primary-cylogo font-semibold text-5xl md:text-6xl overflow-hidden leading-snug md:leading-normal">
                 {d.heading}
               </p>
@@ -21,9 +18,9 @@ const Technologies = () => {
             data-aos="fade-right"
             className="grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3"
           >
-            {TechnologiesDData.map((d) => (
+            {TechnologiesDData.map((d, index) => (
               <div
-                key={d.id}
+                key={index}
                 className="overflow-hidden rounded-2xl drop-shadow-md hover:animate-pulse hover:cursor-pointer"
               >
                 <div>

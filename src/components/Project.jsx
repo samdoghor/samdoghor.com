@@ -112,6 +112,15 @@ const Project = () => {
             </div>
           ))}
         </div>
+        <div className="overflow-hidden">
+          <a
+            href="/jobs"
+            className="overflow-hidden text-white text-xl font-bold hover:underline"
+            target="_blank"
+          >
+            Jobs done with CMS (Wordpress)
+          </a>
+        </div>
       </div>
     </>
   );

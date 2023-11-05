@@ -6,9 +6,9 @@ const PortfolioComponent = ({ id, imageUrl, company, type, link }) => {
       <a className="overflow-hidden" href={link}>
         <div
           key={id}
-          className="min-h-[60vh] lg:min-h-[95vh] box-border border-gray-100 border-2 lg:mx-12 flex flex-col justify-end my-10 rounded-3xl shadow-lg shadow-black"
+          className="min-h-[60vh] lg:min-h-[95vh] box-border border-gray-100 border-2 lg:mx-6 flex flex-col justify-end my-10 rounded-3xl shadow-lg shadow-black"
           style={{
-            backgroundImage: `linear-gradient(rgba(194, 62, 18, -2), rgba(194, 62, 18, 2)), url(${imageUrl})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, -2), rgba(0, 0, 0, 2)), url(${imageUrl})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right",

@@ -13,6 +13,7 @@ import ContactForm from "./pages/ContactForm";
 import Courses from "./pages/Courses";
 import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
+import Jobs from "./pages/Jobs";
 
 export {
   Contact,
@@ -29,4 +30,5 @@ export {
   Courses,
   NotFound,
   Portfolio,
+  Jobs
 };

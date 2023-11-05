@@ -28,7 +28,7 @@ const Jobs = () => {
         </div>
 
         <div>
-          <div className="container mx-auto px-8 md:px-10 py-14">
+          <div className="container mx-auto">
             <div>
               <div className="grid lg:grid-cols-2 md:px-10 mx-auto overflow-hidden">
                 {projectMain.map((projectMain) => (

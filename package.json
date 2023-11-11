@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "devicons-react": "^1.2.6",
     "esm": "^3.2.25",
     "flowbite": "^1.6.5",

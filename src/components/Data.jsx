@@ -72,33 +72,6 @@ export const headerNavData = [
   },
 ];
 
-export const headerSocialData = [
-  {
-    id: 1,
-    label: "Instagram",
-    icon: <FaInstagramSquare />,
-    link: "https://www.instagram.com/samdoghor",
-  },
-  {
-    id: 2,
-    label: "Github",
-    icon: <FaGithub />,
-    link: "https://www.github.com/samdoghor",
-  },
-  {
-    id: 3,
-    label: "LinkedIn",
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/samdoghor",
-  },
-  {
-    id: 4,
-    label: "Twitter",
-    icon: <FaTwitter />,
-    link: "https://www.twitter.com/samdoghor",
-  },
-];
-
 export const HeroData = [
   {
     id: 1,
@@ -128,9 +101,8 @@ export const ServiceData = [
   {
     id: 1,
     service:
-      "An engineer, adept at designing scalable systems with an emphasis on accessibility and interface for digital products.",
-    service2: "I design",
-    service3: "scalable systems ",
+      "Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences.",
+    service2: "I design & build scalable systems",
   },
 ];
 
@@ -177,7 +149,7 @@ export const ProjectDData = [
     labelw: "Website",
     Description:
       "The Nigerian Food Database API is a RESTful API built with Flask-RESTful and PostgreSQL to provide information on various Nigerian dishes.",
-    Image: "/img/ng-food=db-api.png",
+    Image: "/img/the_nigeria_food_db_api.png",
   },
   {
     id: 3,
@@ -344,7 +316,7 @@ export const ContactData = [
     ticon: <MdFlashOn />,
     country: "/img/nigeria_flag.png",
     logo: "/img/manchester-united-logo.png",
-    image: "/img/marcusrashford.png",
+    image: "/img/doghs.jpg",
   },
 ];
 

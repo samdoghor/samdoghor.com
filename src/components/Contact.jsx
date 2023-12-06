@@ -85,10 +85,10 @@ const Contact = () => {
                       >
                         <img
                           className="w-32 mb-8 self-center rounded-full"
-                          alt="Marcus Rashford"
+                          alt="Samuel, Doghor "
                           src={d.image}
                         />
-                        Marcus Rashford
+                        Samuel, Doghor
                       </a>
                     </div>
                   ))}

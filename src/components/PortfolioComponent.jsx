@@ -8,10 +8,10 @@ const PortfolioComponent = ({ id, imageUrl, company, type, link }) => {
           key={id}
           className="min-h-[60vh] lg:min-h-[95vh] box-border border-gray-100 border-2 lg:mx-6 flex flex-col justify-end my-10 rounded-3xl shadow-lg shadow-black"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, -2), rgba(0, 0, 0, 2)), url(${imageUrl})`,
+            backgroundImage: `linear-gradient(rgba(17, 19, 25, .8), rgba(17, 19, 25, 1)), url(${imageUrl})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "right",
+            backgroundPosition: "center",
           }}
         >
           <div className="relative p-4 text-white">

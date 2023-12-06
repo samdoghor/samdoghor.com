@@ -10,8 +10,8 @@ const Portfolio = () => {
       <Hero />
       {/* <Service /> */}
       <Project />
-      <Technologies />
       {/* <Testimonies /> */}
+      <Technologies />
       <Contact />
     </>
   );

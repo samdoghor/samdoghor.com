@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Caveat&family=Chakra+Petch:wght@300&family=Genos:wght@300&family=Hubballi&family=Nova+Mono&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Caveat&family=Chakra+Petch:wght@300&family=Genos:wght@300&family=Hubballi&family=Nova+Mono&family=Ubuntu:wght@300&family=Inconsolata&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -30,18 +30,17 @@ body::-webkit-scrollbar-thumb {
 
 .sticky-nav {
   position: fixed;
-  top: 8;
+  top: 4;
   width: 80vw;
   z-index: 888 !important;
   overflow-y: hidden;
-  background-color: rgba(9, 9, 11, 0.836);
+  background-color: rgba(17, 19, 25, 0.94);
   transition: 1s;
 }
 .sticky-nav .dropdown-menu-o {
   z-index: 999 !important;
   position: fixed;
   display: block;
-  right: 12%;
   border-radius: 5px;
   background-color: white;
   padding: 2px;
@@ -67,7 +66,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
   cursor: pointer;
   z-index: 9999;
-  font-size: 2em;
+  font-size: 1.5em;
   transition: .6s;
 }
 

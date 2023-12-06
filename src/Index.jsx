@@ -14,6 +14,7 @@ import Courses from "./pages/Courses";
 import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
 import Jobs from "./pages/Jobs";
+import JobsCMS from "./pages/JobsCMS";
 
 export {
   Contact,
@@ -30,5 +31,6 @@ export {
   Courses,
   NotFound,
   Portfolio,
-  Jobs
+  Jobs,
+  JobsCMS
 };

@@ -35,7 +35,7 @@ const Header = () => {
                   </a>
                   <a
                     href={headerLogoData[0].link}
-                    className="self-center whitespace-nowrap font-semibold text-sm text-white"
+                    className="self-center whitespace-nowrap font-semibold text-sm text-white tracking-wider"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -48,10 +48,10 @@ const Header = () => {
                     <Navbar.Link
                       key={index}
                       href={d.link}
-                      className="text-white md:hover:text-primary-logo"
+                      className="text-white md:hover:text-primary-logo tracking-wider"
                       target={d.target}
                     >
-                      <p className="flex align-middle gap-2">
+                      <p className="align-middle gap-2">
                         {d.nav} {d.icon}
                       </p>
                     </Navbar.Link>

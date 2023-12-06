@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import PortfolioComponent from "../components/PortfolioComponent";
-import { projectMain } from "../constants";
+import { projectCMS } from "../constants";
 
-const Jobs = () => {
+const JobsCMS = () => {
   useEffect(() => {
-    document.title = "Jobs | ...Samuel, Doghor";
+    document.title = "CMS Jobs | ...Samuel, Doghor";
   }, []);
   return (
     <>
@@ -15,7 +15,7 @@ const Jobs = () => {
               <div className="">
                 <div className="pt-14 md:pt-0">
                   <p className="overflow-hidden font-genos text-6xl font-black tracking-wider text-white">
-                    Selected Coding works
+                    Selected CMS works
                   </p>
                   <p className="overflow-hidden text-xl py-2 leading-10 text-white">
                     Some of my accomplishments.
@@ -31,14 +31,14 @@ const Jobs = () => {
           <div className="container mx-auto">
             <div>
               <div className="grid lg:grid-cols-2 md:px-10 mx-auto overflow-hidden">
-                {projectMain.map((projectMain) => (
+                {projectCMS.map((projectCMS) => (
                   <>
                     <PortfolioComponent
-                      id={projectMain.id}
-                      imageUrl={projectMain.imageUrl}
-                      company={projectMain.company}
-                      type={projectMain.type}
-                      link={projectMain.link}
+                      id={projectCMS.id}
+                      imageUrl={projectCMS.imageUrl}
+                      company={projectCMS.company}
+                      type={projectCMS.type}
+                      link={projectCMS.link}
                     />
                   </>
                 ))}
@@ -51,4 +51,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default JobsCMS;

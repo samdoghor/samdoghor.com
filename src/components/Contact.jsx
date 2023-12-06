@@ -11,7 +11,7 @@ const Contact = () => {
           <div>
             {ContactData.map((d, index) => (
               <div key={index}>
-                <p className="text-primary-cylogo font-semibold text-5xl md:text-6xl overflow-hidden leading-snug md:leading-normal">
+                <p className="text-primary-ylogo text-6xl font-semibold overflow-hidden leading-snug md:leading-normal">
                   {d.heading}
                 </p>
               </div>

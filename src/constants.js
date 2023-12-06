@@ -1,9 +1,33 @@
 export const projectMain = [
   {
     id: 1,
+    company: "Myte",
+    type: "CLI Tool",
+    imageUrl: "/img/myte-h.png",
+    link: "#",
+  },
+  {
+    id: 2,
+    company: "Nigerian Food Database API",
+    type: "Web API",
+    imageUrl: "/img/the_nigeria_food_db_api-h.png",
+    link: "#",
+  },
+  {
+    id: 3,
+    company: "Gomerce",
+    type: "Ecommerce Platform",
+    imageUrl: "/img/gomerce.png",
+    link: "#",
+  },
+];
+
+export const projectCMS = [
+  {
+    id: 1,
     company: "Swadek System Limited",
     type: "Cooperate Website",
-    imageUrl: "img/v-1.png",
+    imageUrl: "img/v-1-h.png",
     link: "#",
   },
   {

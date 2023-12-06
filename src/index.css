@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
 
 .sticky-nav {
   position: fixed;
-  top: 8;
+  top: 4;
   width: 80vw;
   z-index: 888 !important;
   overflow-y: hidden;
@@ -41,7 +41,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 999 !important;
   position: fixed;
   display: block;
-  right: 12%;
   border-radius: 5px;
   background-color: white;
   padding: 2px;
@@ -67,7 +66,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
   cursor: pointer;
   z-index: 9999;
-  font-size: 2em;
+  font-size: 1.5em;
   transition: .6s;
 }
 

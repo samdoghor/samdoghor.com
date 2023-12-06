@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="w-full md:col-span-3  flex items-center">
               {HeroData.map((d, index) => (
                 <span key={index}>
-                  <p className="text-white font-black text-7xl md:text-8xl md:overflow-hidden pb-10 pt-8 md:pt-16 overflow-hidden">
+                  <p className="text-white font-black text-7xl md:text-8xl md:overflow-hidden pb-4 pt-8 md:pt-10 overflow-hidden">
                     {d.name}
                   </p>
                   <p className="text-primary-ylogo font-black text-6xl md:overflow-hidden pb-8 tracking-widest font-ubuntu">
@@ -33,7 +33,7 @@ const Hero = () => {
               {ServiceData.map((d, index) => (
                 <p
                   key={index}
-                  className="text-xl text-white leading-loose overflow-hidden font-inconsolata"
+                  className="text-xl text-white overflow-hidden font-inconsolata"
                 >
                   {d.service}
                 </p>

@@ -51,7 +51,7 @@ const Header = () => {
                       className="text-white md:hover:text-primary-logo tracking-wider"
                       target={d.target}
                     >
-                      <p className="flex align-middle gap-2">
+                      <p className="align-middle gap-2">
                         {d.nav} {d.icon}
                       </p>
                     </Navbar.Link>

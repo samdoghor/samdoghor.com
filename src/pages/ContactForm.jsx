@@ -9,7 +9,7 @@ const ContactForm = () => {
     <>
       <MaintenanceMode
         pagetitle="Contact Page"
-        expectedCompletion="Wednesday, 20th Decemver, 2023"
+        expectedCompletion="Wednesday, 20th December, 2023"
       />
     </>
   );

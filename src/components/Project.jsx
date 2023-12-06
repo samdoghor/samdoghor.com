@@ -55,24 +55,21 @@ const Project = () => {
 
   return (
     <>
-      <div
-        className="w-full pt-16 lg:pt-32 min-h-full overflow-hidden mt-10"
-        id="projects"
-      >
+      <div className="w-full min-h-screen overflow-hidden " id="projects">
         <div>
           {ProjectData.map((d, index) => (
             <p
               key={index}
-              className="text-primary-cylogo font-semibold text-6xl overflow-hidden leading-snug md:leading-normal"
+              className="text-primary-ylogo font-semibold text-6xl overflow-hidden leading-snug md:leading-normal"
             >
               {d.text}
             </p>
           ))}
         </div>
-        <div className="overflow-hidden drop-shadow-xl pt-16">
+        <div className="overflow-hidden drop-shadow-xl pt-4">
           {ProjectDData.map((project, index) => (
             <div
-              className="w-full grid lg:grid-cols-2 pb-12"
+              className="w-full grid lg:grid-cols-2 rounded-3xl my-16 p-6 gap-8"
               data-aos="zoom-out"
               key={index}
             >
@@ -81,7 +78,7 @@ const Project = () => {
                   <p className="text-primary-ylogo text-4xl font-semibold overflow-hidden pb-3 font-hubballi">
                     {project.Title}
                   </p>
-                  <p className="flex pb-3 items-center gap-6 text-white text-lg font-nova font-extralight">
+                  <p className="flex pb-3 items-center gap-6 text-white text-base font-nova font-extralight">
                     <a
                       href={project.GitHub}
                       className="flex items-center gap-1"
@@ -100,26 +97,49 @@ const Project = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-full">
-                <div className="flex place-content-center">
-                  <img
-                    className="flex w-full lg:w-4/6 h-3/6 rounded-[30px] mb-8 place-self-center border-t-d border-l-d border-primary-bblogo border-solid z-10"
+              <div className="">
+                <div className="flex justify-end items-end">
+                  {/* <img
+                    className="w-[100vw] rounded-[30px] border-t-[25px] border-l-[25px] border-primary-ylogo border-solid z-10"
                     alt="Samuel Doghor"
                     src={project.Image}
-                  />
+                  /> */}
+                  <div
+                    className="w-[100vw] h-[50vh] rounded-[30px] border-t-[20px] border-l-[20px] border-primary-ylogo border-solid z-10"
+                    style={{
+                      backgroundImage: `url(${project.Image})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className="overflow-hidden">
-          <a
-            href="/jobs"
-            className="overflow-hidden text-white text-xl font-bold hover:underline"
-            target="_blank"
-          >
-            Jobs done with CMS (Wordpress)
-          </a>
+          <p className="">
+            <ul className="flex">
+              <li className="px-2">
+                <a
+                  href="/jobs"
+                  className="overflow-hidden text-white text-xl font-bold hover:underline"
+                  target="_blank"
+                >
+                  More Jobs
+                </a>
+              </li>
+              <li className="px-2">
+                <a
+                  href="/jobs"
+                  className="overflow-hidden text-white text-xl font-bold hover:underline"
+                  target="_blank"
+                >
+                  CMS Jobs (Wordpress)
+                </a>
+              </li>
+            </ul>
+          </p>
         </div>
       </div>
     </>

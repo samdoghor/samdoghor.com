@@ -60,7 +60,7 @@ const Project = () => {
           {ProjectData.map((d, index) => (
             <p
               key={index}
-              className="text-primary-ylogo font-semibold text-6xl overflow-hidden leading-snug md:leading-normal"
+              className="text-white font-semibold text-6xl overflow-hidden leading-snug"
             >
               {d.text}
             </p>
@@ -69,7 +69,7 @@ const Project = () => {
         <div className="overflow-hidden drop-shadow-xl pt-4">
           {ProjectDData.map((project, index) => (
             <div
-              className="w-full grid lg:grid-cols-2 rounded-3xl my-16 p-6 gap-8"
+              className="w-full grid lg:grid-cols-2 rounded-3xl my-16 pb-6 gap-8"
               data-aos="zoom-out"
               key={index}
             >
@@ -92,7 +92,7 @@ const Project = () => {
                       <FaLink /> <span> Website </span>
                     </a>
                   </p>
-                  <p className="pb-8 text-white text-xl leading-relaxed font-chakra font-light tracking-wide">
+                  <p className="pb-8 text-white text-lg leading-relaxed font-chakra font-light tracking-wide">
                     {project.Description}
                   </p>
                 </div>
@@ -105,7 +105,7 @@ const Project = () => {
                     src={project.Image}
                   /> */}
                   <div
-                    className="w-[100vw] h-[50vh] rounded-[30px] border-t-[20px] border-l-[20px] border-primary-ylogo border-solid z-10"
+                    className="w-[100vw] h-[50vh] rounded-[30px] border-t-[20px] border-l-[20px] border-primary-ylogo  border-solid z-10"
                     style={{
                       backgroundImage: `url(${project.Image})`,
                       backgroundSize: "cover",
@@ -126,16 +126,16 @@ const Project = () => {
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  More Jobs
+                  More Jobs (Coding)
                 </a>
               </li>
               <li className="px-2">
                 <a
-                  href="/jobs"
+                  href="/jobs-cms"
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  CMS Jobs (Wordpress)
+                  More Jobs (Wordpress)
                 </a>
               </li>
             </ul>

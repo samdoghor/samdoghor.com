@@ -9,12 +9,13 @@ export default {
     extend: {
       colors: {
         primary: {
-          logo: "#875d1c",
-          ylogo: "#d67c1c",
+          logo: "#4B5471",
+          ylogo: "#798ABC",
           blogo: "#1e3552",
           bnlogo: "#131a26",
           cylogo: "#f4d8c6",
           bblogo: "#27272a",
+          bgcolor: "#111319",
         },
       },
       fontFamily: {
@@ -25,6 +26,7 @@ export default {
         hubballi: ["Hubballi", "cursive"],
         nova: ["Nova Mono", "monospace"],
         ubuntu: ["Ubuntu", "sans-serif"],
+        inconsolata: ["Inconsolata", "monospace"],
       },
       borderWidth: {
         d: "15px",

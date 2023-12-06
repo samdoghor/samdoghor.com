@@ -1,4 +1,4 @@
-import { Hero, Service, Project, Technologies, Contact } from "../Index";
+import { Hero, Project, Technologies, Contact } from "../Index";
 import { useEffect } from "react";
 
 const Portfolio = () => {
@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <>
       <Hero />
-      <Service />
+      {/* <Service /> */}
       <Project />
       <Technologies />
       {/* <Testimonies /> */}

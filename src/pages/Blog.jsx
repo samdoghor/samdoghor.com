@@ -7,8 +7,10 @@ const Blog = () => {
   }, []);
   return (
     <>
-      <MaintenanceMode pagetitle="Blog Page"
-        expectedCompletion="Friday, 20th November, 2023"/>
+      <MaintenanceMode
+        pagetitle="Blog Page"
+        expectedCompletion="Saturday, 20th January, 2023"
+      />
     </>
   );
 };

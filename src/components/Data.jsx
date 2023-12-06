@@ -42,8 +42,8 @@ const currentYear = new Date().getFullYear();
 export const headerLogoData = [
   {
     id: 1,
-    logo: "<SD/>",
-    name: "source code",
+    logo: "<SD />",
+    name: "Samuel, Doghor",
     link: "https://github.com/samdoghor/samdoghor.com",
     link2: "/",
   },

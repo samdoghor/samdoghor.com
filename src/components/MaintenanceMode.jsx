@@ -17,9 +17,9 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
             This page is undergoing revamping
           </p>
           <p className="text-white pt-8 mx-5 text-2xl lg:pt-20 lg:ps-10 tracking-wide overflow-hidden text-center">
-            <a href="tel:+2349075820497" className="py-1">
+            <a href="tel:+2348031390921" className="py-1">
               Any question? Reach out to us and we’ll get back to you shortly.
-              <br /> You can call +2349075820497
+              <br /> You can call +2348031390921
             </a>
           </p>
           <div className="text-center flex flex-row place-content-center">
@@ -28,13 +28,13 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
                 href="https://wa.me/message/ZU5MOCLXPWDRN1"
                 className="flex items-center py-1"
               >
-                <MdOutlineWhatsapp className="mr-2" /> +234 (907) 582 0497
+                <MdOutlineWhatsapp className="mr-2" /> +234 (803) 139 0921
               </a>
               <a
-                href="mailto:vcare@vivirgros.com"
+                href="mailto:talkto@samdoghor.com"
                 className="flex items-center py-1"
               >
-                <MdMarkEmailRead className="mr-2" /> vcare@vivirgros.com
+                <MdMarkEmailRead className="mr-2" /> talkto@samdoghor.com
               </a>
             </span>
           </div>

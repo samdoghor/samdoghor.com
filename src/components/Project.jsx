@@ -126,7 +126,7 @@ const Project = () => {
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  More Jobs (Coding)
+                  More Jobs (Coding) ⚡
                 </a>
               </li>
               <li className="px-2">
@@ -135,7 +135,7 @@ const Project = () => {
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  More Jobs (Wordpress)
+                  More Jobs (Wordpress) ⚡
                 </a>
               </li>
             </ul>

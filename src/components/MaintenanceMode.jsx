@@ -14,11 +14,12 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
             {pagetitle}
           </p>
           <p className="text-white font-normal tracking-wider py-10 mx-5 text-2xl lg:ps-10 lg:text-6xl font-bakbakOne overflow-hidden">
-            This page is undergoing revamping
+            This page is undergoing revamping/construction
           </p>
           <p className="text-white pt-8 mx-5 text-2xl lg:pt-20 lg:ps-10 tracking-wide overflow-hidden text-center">
             <a href="tel:+2348031390921" className="py-1">
-              Any question? Reach out to us and we’ll get back to you shortly.
+              Any question? Reach out to me and I&apos;ll get back to you
+              shortly.
               <br /> You can call +2348031390921
             </a>
           </p>

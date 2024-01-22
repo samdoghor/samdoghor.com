@@ -68,11 +68,11 @@ const ContactForm = () => {
         <div className="container mx-auto py-20">
           <div className="py-24 md:grid md:grid-cols-2 gap-20">
             <div className="">
-              <p className="text-5xl overflow-hidden font-braah py-4 leading-12 text-white">
+              <p className="text-5xl overflow-hidden font-novaSquare py-4 leading-12 text-white">
                 {"Hi. Let's talk about your project."}
               </p>
               <motion.p
-                className="text-lg overflow-hidden font-serif py-4 leading-10 text-white"
+                className="text-lg overflow-hidden font-inconsolata py-4 leading-10 text-white"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -115,7 +115,7 @@ const ContactForm = () => {
                 </motion.a>
               </motion.p>
 
-              <div>
+              <div className="font-inconsolata">
                 <form
                   className="mt-8"
                   autoComplete="on"

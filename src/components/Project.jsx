@@ -55,12 +55,12 @@ const Project = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen overflow-hidden " id="projects">
+      <div className="w-full min-h-screen overflow-hidden" id="projects">
         <div>
           {ProjectData.map((d, index) => (
             <p
               key={index}
-              className="text-white font-semibold text-6xl overflow-hidden leading-snug"
+              className="text-white font-semibold text-6xl overflow-hidden leading-snug font-novaSquare"
             >
               {d.text}
             </p>
@@ -69,13 +69,13 @@ const Project = () => {
         <div className="overflow-hidden drop-shadow-xl pt-4">
           {ProjectDData.map((project, index) => (
             <div
-              className="w-full grid lg:grid-cols-2 rounded-3xl my-16 pb-6 gap-8"
+              className="w-full grid lg:grid-cols-2 rounded-3xl my-16 p-6 gap-8 bg-primary-pbgcolor border-white border-2"
               data-aos="zoom-out"
               key={index}
             >
               <div>
                 <div>
-                  <p className="text-primary-ylogo text-4xl font-semibold overflow-hidden pb-3 font-hubballi">
+                  <p className="text-primary-ylogo text-2xl font-semibold overflow-hidden pb-3 font-novaSquare">
                     {project.Title}
                   </p>
                   <p className="flex pb-3 items-center gap-6 text-white text-base font-nova font-extralight">
@@ -92,7 +92,7 @@ const Project = () => {
                       <FaLink /> <span> Website </span>
                     </a>
                   </p>
-                  <p className="pb-8 text-white text-lg leading-relaxed font-chakra font-light tracking-wide">
+                  <p className="pb-8 text-white text-lg leading-relaxed font-inconsolata font-thin tracking-wide">
                     {project.Description}
                   </p>
                 </div>
@@ -105,7 +105,7 @@ const Project = () => {
                     src={project.Image}
                   /> */}
                   <div
-                    className="w-[100vw] h-[50vh] rounded-[30px] border-t-[20px] border-l-[20px] border-primary-ylogo  border-solid z-10"
+                    className="w-[100vw] md:w-[60vw] h-[30vh] rounded-[30px] border-t-[20px] border-l-[20px] border-white  border-solid z-10"
                     style={{
                       backgroundImage: `url(${project.Image})`,
                       backgroundSize: "cover",
@@ -119,14 +119,14 @@ const Project = () => {
         </div>
         <div className="overflow-hidden">
           <p className="">
-            <ul className="flex">
+            <ul className="flex font-novaSquare">
               <li className="px-2">
                 <a
                   href="/jobs"
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  More Jobs (Coding) ⚡
+                  More Projects (Coding) ⚡
                 </a>
               </li>
               <li className="px-2">
@@ -135,7 +135,7 @@ const Project = () => {
                   className="overflow-hidden text-white text-xl font-bold hover:underline"
                   target="_blank"
                 >
-                  More Jobs (Wordpress) ⚡
+                  More Projects (Wordpress) ⚡
                 </a>
               </li>
             </ul>

@@ -42,18 +42,10 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
 
           <div className="text-center flex flex-row place-content-center">
             <span className="text-white pt-8 mx-20 text-lg lg:pt-20 lg:ps-10 tracking-wide overflow-hidden">
-              <a
-                href="https://wa.me/message/ZU5MOCLXPWDRN1"
-                className="flex items-center py-1 text-orange-400"
-              >
+              <p className="flex items-center py-1 text-orange-400">
                 Expected Completion Date:
-              </a>
-              <a
-                href="mailto:vcare@vivirgros.com"
-                className="flex items-center py-1"
-              >
-                {expectedCompletion}
-              </a>
+              </p>
+              <p className="flex items-center py-1">{expectedCompletion}</p>
             </span>
           </div>
         </div>

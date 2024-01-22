@@ -7,6 +7,7 @@ import Service from "./components/Service";
 import Technologies from "./components/Technologies";
 import Testimonies from "./components/Testimonies";
 import ScrollToTop from "./components/ScrollToTop";
+import BlogComponent from "./components/BlogComponent";
 
 import Blog from "./pages/Blog";
 import ContactForm from "./pages/ContactForm";
@@ -32,5 +33,6 @@ export {
   NotFound,
   Portfolio,
   Jobs,
-  JobsCMS
+  JobsCMS,
+  BlogComponent,
 };

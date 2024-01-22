@@ -357,6 +357,12 @@ export const contactSocialData = [
     icon: <FaTwitter />,
     link: "https://www.twitter.com/samdoghor",
   },
+  {
+    id: 7,
+    label: "Portfolio Repo",
+    icon: <FaGithub />,
+    link: "https://github.com/samdoghor/samdoghor.com",
+  },
 ];
 
 export const FooterData = [

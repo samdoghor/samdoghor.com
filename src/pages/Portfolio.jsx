@@ -11,6 +11,7 @@ const Portfolio = () => {
       {/* <Service /> */}
       <Project />
       {/* <Testimonies /> */}
+      {/* <BlogComponent /> */}
       <Technologies />
       <Contact />
     </>

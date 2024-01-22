@@ -15,7 +15,7 @@ Built with [Vite-React](https://vitejs.dev/), [TailwindCSS](https://tailwindcss.
 <!-- Built with [Vite-React](https://vitejs.dev/), [Three JS](https://threejs.org/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend with [Vercel](https://vercel.com/) while backend & Database with [Render](https://render.com/). -->
 
 <!-- ![My Portfolio](frontend/public/img/portfolio.png) -->
-![Alt text](image.png)
+![Alt text](image-new.png)
 
 ## Connect with me
 

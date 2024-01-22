@@ -11,7 +11,7 @@ const Contact = () => {
           <div>
             {ContactData.map((d, index) => (
               <div key={index}>
-                <p className="text-primary-ylogo text-6xl font-semibold overflow-hidden leading-snug md:leading-normal">
+                <p className="text-white text-6xl font-semibold overflow-hidden leading-snug md:leading-normal font-novaSquare">
                   {d.heading}
                 </p>
               </div>
@@ -23,7 +23,7 @@ const Contact = () => {
                 <div>
                   {ContactData.map((d, index) => (
                     <div key={index}>
-                      <p className="flex  text-primary-ylogo text-2xl align-middle gap-4">
+                      <p className="flex  text-primary-ylogo text-2xl align-middle gap-4 font-novaSquare">
                         {d.ticon} {d.title}
                       </p>
                     </div>
@@ -33,7 +33,7 @@ const Contact = () => {
                   {contactSocialData.map((d, index) => (
                     <div key={index}>
                       <a
-                        className="flex text-lg text-white items-center gap-2 mt-6"
+                        className="flex text-lg text-white items-center gap-2 mt-6 font-inconsolata"
                         href={d.link}
                         key={d.id}
                         target="_blank"
@@ -52,7 +52,7 @@ const Contact = () => {
                   {ContactData.map((d, index) => (
                     <div
                       key={index}
-                      className="flex justify-center items-center gap-10 h-fit overflow-hidden pt-10 text-center"
+                      className="flex justify-center items-center gap-10 h-fit overflow-hidden pt-10 text-center font-novaSquare"
                     >
                       <a
                         className="self-center  text-white font-semibold text-lg"

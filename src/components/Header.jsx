@@ -14,7 +14,7 @@ const Header = () => {
           <a href={headerLogoData[0].link2}>
             <Navbar.Brand className="text-xl font-bold md:text-2xl text-primary-logo">
               {headerLogoData[0].logo}
-              <span className="self-center whitespace-nowrap text-sm font-semibold dark:text-white">
+              <span className="self-center whitespace-nowrap text-sm font-semibold dark:text-white font-novaSquare">
                 {headerLogoData[0].name}
               </span>
             </Navbar.Brand>
@@ -25,7 +25,7 @@ const Header = () => {
               <Navbar.Link
                 key={index}
                 href={d.link}
-                className="text-white md:hover:text-primary-logo tracking-wider"
+                className="text-white md:hover:text-primary-logo tracking-wider font-inconsolata"
                 target={d.target}
               >
                 <p className="">

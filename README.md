@@ -6,7 +6,13 @@ This is my personal portfolio/website
 
 [Samuel, Doghor](https://samdoghor.com) - website
 
-Built with [Vite-React](https://vitejs.dev/), [Three JS](https://threejs.org/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend with [Vercel](https://vercel.com/) while backend & Database with [Render](https://render.com/).
+[Blog Admin Page](https://app.samdoghor.com) - website
+
+[Blog Admin Repo](https://github.com/samdoghor/simple-blog) - repo
+
+Built with [Vite-React](https://vitejs.dev/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend, backend & Database with [Vercel](https://vercel.com/).
+
+<!-- Built with [Vite-React](https://vitejs.dev/), [Three JS](https://threejs.org/), [TailwindCSS](https://tailwindcss.com/) and hosted frontend with [Vercel](https://vercel.com/) while backend & Database with [Render](https://render.com/). -->
 
 <!-- ![My Portfolio](frontend/public/img/portfolio.png) -->
 ![Alt text](image.png)

@@ -7,7 +7,7 @@ const Technologies = () => {
         <div>
           {TechnologiesData.map((d, index) => (
             <div key={index}>
-              <p className="text-white text-6xl font-semibold overflow-hidden leading-snug md:leading-normal">
+              <p className="text-white text-6xl font-semibold overflow-hidden leading-snug md:leading-normal font-novaSquare">
                 {d.heading}
               </p>
             </div>
@@ -27,10 +27,10 @@ const Technologies = () => {
                   <div className="grid text-4xl text-white font-nova tracking-wider overflow-hidden font-bold p-1 justify-items-center">
                     <span className="text-center"> {d.icon} </span>
                   </div>
-                  <div className="p-1 rounded-full text-primary-ylogo font-ubuntu font-bold tracking-wide text-center">
+                  <div className="p-1 rounded-full text-primary-ylogo font-novaSquare font-bold tracking-wide text-center">
                     {d.category}
                   </div>
-                  <div className="pb-8 rounded-full text-white font-ubuntu font-normal tracking-wide text-center text-xs">
+                  <div className="pb-8 rounded-full text-white font-inconsolata font-normal tracking-wide text-center text-normal">
                     {d.label}
                   </div>
                 </div>

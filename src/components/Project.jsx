@@ -105,7 +105,7 @@ const Project = () => {
                     src={project.Image}
                   /> */}
                   <div
-                    className="w-[100vw] md:w-[60vw] h-[30vh] rounded-[30px] border-t-[20px] border-l-[20px] border-white  border-solid z-10"
+                    className="w-[100vw] md:w-[60vw] h-[40vh] rounded-[30px] border-t-[10px] border-l-[10px] border-white  border-solid z-10"
                     style={{
                       backgroundImage: `url(${project.Image})`,
                       backgroundSize: "cover",

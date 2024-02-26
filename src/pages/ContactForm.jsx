@@ -44,7 +44,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         setSubmissionStatus(
-          "Your request was sent successfully. We will get in touch ASPA"
+          "Your request was sent successfully. I will get in touch ASAP"
         );
 
         setTimeout(() => {
@@ -52,7 +52,7 @@ const ContactForm = () => {
         }, 5000);
       } else {
         setSubmissionStatus(
-          "Your request was not successful please try again."
+          "Your request was not successful, please try again."
         );
       }
       // } catch (error) {

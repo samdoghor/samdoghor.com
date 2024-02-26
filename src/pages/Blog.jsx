@@ -9,7 +9,7 @@ const Blog = () => {
     <>
       <MaintenanceMode
         pagetitle="Blog Page"
-        expectedCompletion="Thursday, 29th February, 2024"
+        expectedCompletion="Sunday, 31st March, 2024"
       />
     </>
   );

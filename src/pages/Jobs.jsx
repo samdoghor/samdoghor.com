@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import PortfolioComponent from "../components/PortfolioComponent";
 import { projectMain } from "../constants";
+import { Helmet } from "react-helmet";
 
 const Jobs = () => {
   useEffect(() => {
@@ -8,6 +9,18 @@ const Jobs = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
+        />
+        <meta property="og:title" content="Jobs | Samuel Doghor" />
+        <meta
+          property="og:description"
+          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
+        />
+        <meta property="og:image" content="/img/doghs.jpg" />
+      </Helmet>
       <div>
         <div className="min-h-fit py-28">
           <div className="container mx-auto px-8 md:px-10">

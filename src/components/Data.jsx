@@ -4,7 +4,6 @@ import {
   FaLinkedin,
   FaTwitter,
   FaInstagramSquare,
-  FaLink,
   FaGitAlt,
   FaPython,
   FaVuejs,
@@ -101,7 +100,7 @@ export const ServiceData = [
   {
     id: 1,
     service:
-      "Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences.",
+      "Backend focused engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences.",
     service2: "I design & build scalable systems",
   },
 ];
@@ -129,40 +128,31 @@ export const ProjectDData = [
     id: 1,
     Title: "Myte",
     GitHub: "https://github.com/samdoghor/myte",
-    githubi: <FaGithub />,
-    labelg: "Github",
     Website: "#",
-    websitei: <FaLink />,
-    labelw: "Website",
     Description:
       "Myte is a simple command-line tool for creating boilerplate code for python web projects. It simplifies the project setup process by providing a user-friendly interface to choose the project name, framework, and setup complexity.",
     Image: "/img/myte.png",
+    Status: "Active",
   },
   {
     id: 2,
     Title: "Nigerian Food Database API",
     GitHub: "https://github.com/samdoghor/NG-food-DB-APIs",
-    githubi: <FaGithub />,
-    labelg: "Github",
     Website: "#",
-    websitei: <FaLink />,
-    labelw: "Website",
     Description:
       "The Nigerian Food Database API is a RESTful API built with Flask-RESTful and PostgreSQL to provide information on various Nigerian dishes.",
     Image: "/img/the_nigeria_food_db_api.png",
+    Status: "Development",
   },
   {
     id: 3,
     Title: "Gomerce",
     GitHub: "https://github.com/samdoghor/GomerceBE",
-    githubi: <FaGithub />,
-    labelg: "Github",
     Website: "#",
-    websitei: <FaLink />,
-    labelw: "Website",
     Description:
       "E-commerce app enhanced with JWT authentication, SqlAlchemy, **SQLite** persistence and deployment scripts via Docker. It has all the ready-to-use bare minimum essentials.",
     Image: "/img/gomerce.png",
+    Status: "Development",
   },
 ];
 

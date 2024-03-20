@@ -1,6 +1,5 @@
-import { Hero, Project, Technologies, Contact } from "../Index";
+import { Hero, Project, Technologies, Contact, Service } from "../Index";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -8,21 +7,8 @@ const Portfolio = () => {
   }, []);
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
-        />
-        <meta property="og:title" content="Portfolio | Samuel Doghor" />
-        <meta
-          property="og:description"
-          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
-        />
-        <meta property="og:image" content="/img/doghs.jpg" />
-      </Helmet>
-
       <Hero />
-      {/* <Service /> */}
+      <Service />
       <Project />
       {/* <Testimonies /> */}
       {/* <BlogComponent /> */}

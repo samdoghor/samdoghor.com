@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { ProjectData, ProjectDData } from "./Data";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaSplotch } from "react-icons/fa";
 // import axios from "axios";
 
 const Project = () => {
@@ -83,14 +83,26 @@ const Project = () => {
                       href={project.GitHub}
                       className="flex items-center gap-1"
                     >
-                      <FaGithub /> <span> Github </span>
+                      <FaGithub />
+                      <span className="text-slate-400 "> Github </span>
                     </a>
                     <a
                       href={project.Website}
                       className="flex items-center gap-1"
                     >
-                      <FaLink /> <span> Website </span>
+                      <FaLink />
+                      <span className="text-slate-400 "> Website </span>
                     </a>
+                    <span
+                      href={project.Website}
+                      className="flex items-center gap-1"
+                    >
+                      <FaSplotch />
+                      <p className="text-slate-400 ">
+                        Status:
+                        <span className="text-white"> {project.Status} </span>
+                      </p>
+                    </span>
                   </p>
                   <p className="pb-8 text-white text-lg leading-relaxed font-inconsolata font-thin tracking-wide">
                     {project.Description}

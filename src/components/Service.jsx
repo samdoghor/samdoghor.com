@@ -4,19 +4,19 @@ const Service = () => {
       <div className="pb-20">
         <div>
           <div className="w-full grid lg:grid-cols-3 text-center">
-            <div className="w-full">
+            <div className="w-full py-4">
               <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
                 05+ Years
               </p>
               <p className="overflow-hidden text-white">of Experience </p>
             </div>
-            <div className="w-full">
+            <div className="w-full py-4">
               <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
                 18+
               </p>
               <p className="overflow-hidden text-white"> Projects Completed </p>
             </div>
-            <div className="w-full">
+            <div className="w-full py-4">
               <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
                 04+
               </p>

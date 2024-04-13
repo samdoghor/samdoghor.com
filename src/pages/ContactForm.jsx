@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 
 const ContactForm = () => {
-  useEffect(() => {
-    document.title = "Contact | Samuel Doghor";
-  }, []);
-
   const [formData, setFormData] = useState({
     companyName: "",
     yourName: "",
@@ -65,18 +61,24 @@ const ContactForm = () => {
   };
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
-        />
-        <meta property="og:title" content="Contact | Samuel Doghor" />
-        <meta
-          property="og:description"
-          content="Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
-        />
-        <meta property="og:image" content="/img/doghs.jpg" />
-      </Helmet>
+      <div>
+        <Helmet>
+          <title> Contact | Samuel Doghor </title>
+
+          <meta property="title" content="Contact | Samuel Doghor" />
+          <meta property="og:title" content="Contact | Samuel Doghor" />
+          <meta
+            property="description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
+          />
+          <meta
+            property="og:description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
+          />
+          <meta property="image" content="/img/doghs.jpg" />
+          <meta property="og:image" content="/img/doghs.jpg" />
+        </Helmet>
+      </div>
       <div className="">
         <div className="container mx-auto py-20">
           <div className="py-24 md:grid md:grid-cols-2 gap-20">

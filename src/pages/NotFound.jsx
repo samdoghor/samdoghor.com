@@ -1,11 +1,26 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
-  useEffect(() => {
-    document.title = "Not Found | Samuel Doghor";
-  }, []);
   return (
     <>
+      <div>
+        <Helmet>
+          <title> Not Found | Samuel Doghor </title>
+
+          <meta property="title" content="Not Found | Samuel Doghor" />
+          <meta property="og:title" content="Not Found | Samuel Doghor" />
+          <meta
+            property="description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
+          />
+          <meta
+            property="og:description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
+          />
+          <meta property="image" content="/img/doghs.jpg" />
+          <meta property="og:image" content="/img/doghs.jpg" />
+        </Helmet>
+      </div>
       <div className="grid h-[100vh] place-items-center px-6 py-10 lg:px-8">
         <div className="text-center">
           <p className="text-9xl font-semibold text-white overflow-hidden font-alfaSlabOne tracking-widest">

@@ -1,13 +1,28 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import PortfolioComponent from "../components/PortfolioComponent";
 import { projectCMS } from "../constants";
 
 const JobsCMS = () => {
-  useEffect(() => {
-    document.title = "CMS Jobs | ...Samuel, Doghor";
-  }, []);
   return (
     <>
+      <div>
+        <Helmet>
+          <title> CMS Jobs | Samuel, Doghor </title>
+
+          <meta property="title" content="CMS Jobs | Samuel, Doghor" />
+          <meta property="og:title" content="CMS Jobs | Samuel, Doghor" />
+          <meta
+            property="description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
+          />
+          <meta
+            property="og:description"
+            content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
+          />
+          <meta property="image" content="/img/doghs.jpg" />
+          <meta property="og:image" content="/img/doghs.jpg" />
+        </Helmet>
+      </div>
       <div>
         <div className="min-h-fit py-28">
           <div className="container mx-auto px-8 md:px-10">

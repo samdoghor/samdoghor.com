@@ -4,7 +4,13 @@
     {
       "source": "/(.*)",
       "destination": "https://www.samdoghor.com/$1",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "samdoghor.com"
+        }
+      ]
     }
   ]
 }

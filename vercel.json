@@ -2,7 +2,7 @@
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "redirects": [
     {
-      "source": "https://samdoghor.com/(.*)",
+      "source": "/(.*)",
       "destination": "https://www.samdoghor.com/$1",
       "permanent": true
     }

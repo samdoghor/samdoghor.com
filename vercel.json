@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "redirects": [
+    {
+      "source": "https://samdoghor.com/(.*)",
+      "destination": "https://www.samdoghor.com/$1",
+      "permanent": true
+    }
+  ]
 }

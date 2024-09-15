@@ -32,10 +32,10 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
                 <MdOutlineWhatsapp className="mr-2" /> +234 (803) 139 0921
               </a>
               <a
-                href="mailto:talkto@samdoghor.com"
+                href="mailto:talkto@samdoghor.tech"
                 className="flex items-center py-1"
               >
-                <MdMarkEmailRead className="mr-2" /> talkto@samdoghor.com
+                <MdMarkEmailRead className="mr-2" /> talkto@samdoghor.tech
               </a>
             </span>
           </div>

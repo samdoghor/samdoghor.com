@@ -24,7 +24,7 @@ const Courses = () => {
       </div>
       <MaintenanceMode
         pagetitle="Courses Page"
-        expectedCompletion="Sunday, 30th June, 2024"
+        expectedCompletion="Monday, 3rd March, 2025"
       />
     </>
   );

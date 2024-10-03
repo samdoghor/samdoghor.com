@@ -23,7 +23,7 @@ const Gide = () => {
       </div>
       <MaintenanceMode
         pagetitle="Gide (Godsgift/Doghor(Destiny)), 9th November, 2024"
-        expectedCompletion="Monday, 30th September, 2024"
+        expectedCompletion="Monday, 21st October, 2024"
       />
     </>
   );

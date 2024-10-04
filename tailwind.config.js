@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ["class"],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -17,6 +18,8 @@ export default {
           bblogo: "#27272a",
           bgcolor: "#111319",
           pbgcolor: "#060912",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
       },
       fontFamily: {
@@ -29,12 +32,10 @@ export default {
         ubuntu: ["Ubuntu", "sans-serif"],
         inconsolata: ["Inconsolata", "monospace"],
         novaSquare: ["Nova Square", "sans-serif"],
-      },
-      borderWidth: {
-        d: "15px",
+        anton: ["Anton", "sans-serif"],
       },
     },
   },
   // eslint-disable-next-line no-undef
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), require("tailwindcss-animate")],
 };

@@ -8,6 +8,10 @@ export default defineConfig({
     include: ["three"], // Tell Vite to optimize the "three" package
   },
   server: {
-    host: "0.0.0.0"
-  }
+    host: "0.0.0.0",
+    port: 3000,
+    // watch: {
+    //   usePolling: true,
+    // },
+  },
 });

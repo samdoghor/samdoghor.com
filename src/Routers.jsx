@@ -1,28 +1,48 @@
-import { Routes, Route } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import {
   Portfolio,
   Blog,
+  NotFound,
   Courses,
   ContactForm,
-  NotFound,
-  Jobs,
   JobsCMS,
+  Jobs,
   Gide,
 } from "./Index";
 
-const Routers = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Portfolio />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/courses" element={<Courses />} />
-      <Route path="/contact" element={<ContactForm />} />
-      <Route path="/jobs-cms" element={<JobsCMS />} />
-      <Route path="/jobs" element={<Jobs />} />
-      <Route path="/gide" element={<Gide />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-};
+const routers = createBrowserRouter([
+  {
+    path: "/",
+    element: <Portfolio />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "/courses",
+    element: <Courses />,
+  },
+  {
+    path: "/contact",
+    element: <ContactForm />,
+  },
+  {
+    path: "/jobs-cms",
+    element: <JobsCMS />,
+  },
+  {
+    path: "/jobs",
+    element: <Jobs />,
+  },
+  {
+    path: "/gide",
+    element: <Gide />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
-export default Routers;
+export default routers;

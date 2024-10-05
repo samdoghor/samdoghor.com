@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { ScrollToTop } from "../Index";
 import { FaCalendarCheck, FaClock } from "react-icons/fa";
+import { Button } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Gide = () => {
   return (
@@ -25,76 +27,106 @@ const Gide = () => {
         </Helmet>
       </div>
 
-      <div className="bg-neutral-300 flex justify-center items-center p-12">
-        <div className="bg-neutral-100 border-4 border-t-amber-600 border-b-green-800 border-r-amber-600 border-l-green-800 w-2/5 rounded-2xl">
-          <div className="my-8">
-            <div className="flex flex-row gap-4 justify-center h-full">
-              <div className="flex flex-col h-full justify-center items-center gap-5">
-                <img
-                  src="/img/gide-logo.png"
-                  alt="God's Gift"
-                  className="rounded-full w-20 h-20"
-                />
+      <div className="bg-neutral-300 min-h-screen">
+        <div className="bg-[url('/img/wedding-bg.png')] w-full flex justify-center items-center p-4 md:p-12 bg-cover md:bg-contain bg-center bg-no-repeat min-h-screen">
+          <div className="bg-neutral-100 border-4 border-t-amber-600 border-b-green-800 border-r-amber-600 border-l-green-800 w-full md:w-2/5 rounded-2xl">
+            <div className="m-2 md:m-8">
+              <div className="flex flex-row gap-4 justify-center h-full">
+                <div className="flex flex-col h-full justify-center items-center gap-5">
+                  <img
+                    src="/img/gide-logo.png"
+                    alt="God's Gift"
+                    className="rounded-full w-20 h-20"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className="pb-2">
-              <p className="text-green-800 text-center text-4xl font-bold py-1">
-                You are invited
-              </p>
-              <p className="text-black text-center text-xl font-bold py-1 font-caveat">
-                to the
-              </p>
-              <p className="text-green-700 text-center text-5xl font-bold pt-1 font-protestStrike tracking-wide leading-tight h-40">
-                Solemnization of <br /> Holy Matrimony
-              </p>
-              <p className="text-black text-center text-xl font-bold font-caveat">
-                of
-              </p>
-            </div>
-
-            <div className="flex flex-row gap-20 justify-center h-full">
-              <div className="flex flex-col h-full justify-center items-center gap-5">
-                <img
-                  src="/img/godsgift.jpg"
-                  alt="God's Gift"
-                  className="rounded-full w-40 h-40"
-                />
-                <p className="h-10 text-green-800 font-bold">
-                  God&apos;sgift Ikio,
-                  <span className="ps-2 font-novaSquare font-semibold text-xl">
-                    Ogodo
-                  </span>
+              <div className="pb-2">
+                <p className="text-green-800 text-center text-2xl md:text-4xl font-bold py-1">
+                  You are invited
+                </p>
+                <p className="text-black text-center text-xl font-bold py-1 font-caveat">
+                  to the
+                </p>
+                <p className="text-green-700 text-center text-4xl md:text-5xl font-bold md:pt-1 font-protestStrike tracking-wide leading-tight md:h-40">
+                  Solemnization of <br /> Holy Matrimony
+                </p>
+                <p className="text-black text-center text-xl font-bold font-caveat">
+                  of
                 </p>
               </div>
-              <div className="flex flex-col h-full justify-center items-center gap-5">
-                <img
-                  src="/img/doghor.jpg"
-                  alt="Doghor"
-                  className="rounded-full w-40 h-40"
-                />
-                <p className="h-10 text-green-800 font-bold">
-                  Doghor Destiny,
-                  <span className="ps-2 font-novaSquare font-semibold text-xl">
-                    Samuel
+
+              <div className="flex flex-col md:flex-row md:gap-20 justify-center h-full">
+                <div className="flex flex-col h-full justify-center items-center gap-5">
+                  <img
+                    src="/img/godsgift.jpg"
+                    alt="God's Gift"
+                    className="rounded-full w-36 md:w-40 h-w-36 md:h-40"
+                  />
+                  <p className="h-10 text-green-800 font-bold">
+                    God&apos;sgift Ikio,
+                    <span className="ps-2 font-novaSquare font-semibold text-xl">
+                      Ogodo
+                    </span>
+                  </p>
+                </div>
+                <div className="flex flex-col h-full justify-center items-center gap-5">
+                  <img
+                    src="/img/doghor.jpg"
+                    alt="Doghor"
+                    className="rounded-full w-36 md:w-40 h-w-36 md:h-40"
+                  />
+                  <p className="h-10 text-green-800 font-bold">
+                    Doghor Destiny,
+                    <span className="ps-2 font-novaSquare font-semibold text-xl">
+                      Samuel
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-12 pt-10">
+                <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
+                  <span>
+                    <FaCalendarCheck />
                   </span>
+                  <span>9th November, 2024</span>
+                </p>
+                <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
+                  <span>
+                    <FaClock />
+                  </span>
+                  <span>10am</span>
                 </p>
               </div>
-            </div>
 
-            <div className="flex justify-center items-center gap-12 pt-10">
-              <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
-                <span>
-                  <FaCalendarCheck />
-                </span>
-                <span>9th November, 2024</span>
-              </p>
-              <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
-                <span>
-                  <FaClock />
-                </span>
-                <span>10am</span>
-              </p>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 pt-10">
+                <a
+                  href="https://maps.app.goo.gl/j6tB1o5Wb3iFSmLh6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button outline gradientDuoTone="pinkToOrange">
+                    Directions to Church
+                  </Button>
+                </a>
+                <Link to="/gide/gallery" target="_blank">
+                  <Button outline gradientDuoTone="greenToBlue">
+                    See our Gallery
+                  </Button>
+                </Link>
+                <a
+                  href="https://maps.app.goo.gl/7G3ykzLsXcSaaTzM8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button outline gradientDuoTone="pinkToOrange">
+                    Directions to Reception
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

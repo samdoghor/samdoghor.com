@@ -33,6 +33,7 @@ export default {
         inconsolata: ["Inconsolata", "monospace"],
         novaSquare: ["Nova Square", "sans-serif"],
         anton: ["Anton", "sans-serif"],
+        protestStrike: ["Protest Strike", "sans-serif"],
       },
     },
   },

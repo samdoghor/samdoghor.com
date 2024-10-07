@@ -63,7 +63,7 @@ const Gide = () => {
                     alt="God's Gift"
                     className="rounded-full w-36 md:w-40 h-w-36 md:h-40"
                   />
-                  <p className="h-10 text-green-800 font-bold">
+                  <p className="h-16 text-center text-green-800 font-bold">
                     God&apos;sgift Ikio,
                     <span className="ps-2 font-novaSquare font-semibold text-xl">
                       Ogodo
@@ -76,7 +76,7 @@ const Gide = () => {
                     alt="Doghor"
                     className="rounded-full w-36 md:w-40 h-w-36 md:h-40"
                   />
-                  <p className="h-10 text-green-800 font-bold">
+                  <p className="h-16 text-center text-green-800 font-bold">
                     Doghor Destiny,
                     <span className="ps-2 font-novaSquare font-semibold text-xl">
                       Samuel
@@ -85,24 +85,36 @@ const Gide = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-12 pt-10">
-                <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
-                  <span>
-                    <FaCalendarCheck />
-                  </span>
-                  <span>9th November, 2024</span>
-                </p>
-                <p className="text-green-800 text-center text-xl font-normal flex flex-row gap-2 justify-center items-center">
-                  <span>
-                    <FaClock />
-                  </span>
-                  <span>10am</span>
-                </p>
+              <div className="flex flex-col justify-center items-center gap-2 pt-10">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-12">
+                  <p className="text-green-800 text-center textlg font-normal flex flex-row gap-2 justify-center items-center">
+                    <span>
+                      <FaCalendarCheck />
+                    </span>
+                    <span className="overflow-hidden">9th November, 2024</span>
+                  </p>
+                  <p className="text-green-800 text-center textlg font-normal flex flex-row gap-2 justify-center items-center">
+                    <span>
+                      <FaClock />
+                    </span>
+                    <span className="overflow-hidden">10am</span>
+                  </p>
+                </div>
+                <div className="h-10 pt-4">
+                  <a
+                    className="h-10 text-green-800 text-center text-normal font-normal underline"
+                    href="https://calendar.app.google/oorFKX8h8Vt871N69"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Set Reminder
+                  </a>
+                </div>
               </div>
 
               <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 pt-10">
                 <a
-                  href="https://maps.app.goo.gl/j6tB1o5Wb3iFSmLh6"
+                  href="https://maps.app.goo.gl/NQZ91XJTNZiYbh5C9"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}

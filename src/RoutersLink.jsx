@@ -9,6 +9,7 @@ import {
   Jobs,
   Gide,
 } from "./Index";
+import PhotoGallery from "./pages/PhotoGallery";
 
 const routers = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const routers = createBrowserRouter([
   {
     path: "/gide",
     element: <Gide />,
+  },
+  {
+    path: "/gide/gallery",
+    element: <PhotoGallery />,
   },
   {
     path: "*",

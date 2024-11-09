@@ -41,10 +41,6 @@ const routers = createBrowserRouter([
     element: <Gide />,
   },
   {
-    path: "/gide/gallery",
-    element: <PhotoGallery />,
-  },
-  {
     path: "*",
     element: <NotFound />,
   },

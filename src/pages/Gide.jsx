@@ -123,11 +123,11 @@ const Gide = () => {
                     Directions to Church
                   </Button>
                 </a>
-                <Link to="/gide/gallery" target="_blank">
+                {/* <Link to="/gide/gallery" target="_blank">
                   <Button outline gradientDuoTone="greenToBlue">
                     See our Gallery
                   </Button>
-                </Link>
+                </Link> */}
                 <a
                   href="https://maps.app.goo.gl/7G3ykzLsXcSaaTzM8"
                   target="_blank"

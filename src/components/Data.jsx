@@ -188,7 +188,7 @@ export const TechnologiesDData = [
   { id: 10, label: "SolidWorks", track: "Piping Engineering" },
   { id: 11, label: "CAESAR II", track: "Piping Engineering" },
   { id: 12, label: "AutoPipe", track: "Piping Engineering" },
-  { id: 13, label: "P&ID / Isometrics", icon: <SiSwagger />, track: "Piping Engineering" },
+  { id: 13, label: "P&ID / Isometrics", track: "Piping Engineering" },
   { id: 14, label: "MTO Documentation", track: "Piping Engineering" },
   { id: 15, label: "Site Verification", track: "Piping Engineering" },
   { id: 16, label: "Test Pack Updates", track: "Piping Engineering" },

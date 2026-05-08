@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-3 shadow-2xl shadow-cyan-900/30">
             <img src={hero.profileImage} alt={hero.name} className="h-80 w-full rounded-2xl object-cover" />
           </div>
-          <div id="careers" className="grid gap-4">
+          <div id="careers" className="grid gap-4 md:grid-cols-2">
             {CareerTracksData.map((track) => (
               <article key={track.id} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
                 <h3 className="text-lg font-bold text-white">{track.title}</h3>

@@ -24,9 +24,11 @@ const Project = () => {
                 Status: <span className="font-semibold text-slate-100">{project.Status}</span>
               </p>
               <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-300">
-                <a href={project.GitHub} className="inline-flex items-center gap-2 hover:text-cyan-300" target="_blank" rel="noreferrer">
-                  <FaGithub /> GitHub
-                </a>
+                {project.GitHub !== "#" ? (
+                  <a href={project.GitHub} className="inline-flex items-center gap-2 hover:text-cyan-300" target="_blank" rel="noreferrer">
+                    <FaGithub /> GitHub
+                  </a>
+                ) : null}
                 {project.Website !== "#" ? (
                   <a href={project.Website} className="inline-flex items-center gap-2 hover:text-cyan-300" target="_blank" rel="noreferrer">
                     <FaLink /> Website
@@ -53,10 +55,7 @@ const Project = () => {
 
       <div className="mt-10 flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-widest">
         <a href="/jobs" className="rounded-full border border-white/20 px-5 py-3 text-slate-200 transition hover:border-cyan-300 hover:text-cyan-300" target="_blank" rel="noreferrer">
-          More Coding Projects
-        </a>
-        <a href="/jobs-cms" className="rounded-full border border-white/20 px-5 py-3 text-slate-200 transition hover:border-cyan-300 hover:text-cyan-300" target="_blank" rel="noreferrer">
-          More CMS Projects
+          More
         </a>
       </div>
     </section>

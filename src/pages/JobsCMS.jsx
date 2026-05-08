@@ -8,7 +8,7 @@ const JobsCMS = () => {
   return (
     <>
       <div
-        className="container mx-auto px-4 md:px-32 bg-primary-bgcolor min-h-screen max-w-full"
+        className="container mx-auto px-4 md:px-32 bg-white dark:bg-primary-bgcolor min-h-screen max-w-full text-slate-900 dark:text-white"
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />

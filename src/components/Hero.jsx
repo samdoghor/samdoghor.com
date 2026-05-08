@@ -7,13 +7,13 @@ const Hero = () => {
     <section className="pt-28 md:pt-36" id="home">
       <div className="grid gap-10 md:grid-cols-[1.3fr,1fr] md:items-center">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">
+          <span className="inline-flex rounded-full border border-cyan-600/30 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:border-cyan-400/30 dark:text-cyan-300">
             Portfolio 2026
           </span>
-          <h1 className="text-4xl font-black leading-tight text-white md:text-6xl">{hero.name}</h1>
-          <p className="text-lg font-semibold text-cyan-300 md:text-2xl">{hero.stack}</p>
-          <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">{hero.summary}</p>
-          <p className="font-mono text-sm text-slate-400">{hero.code1}</p>
+          <h1 className="text-4xl font-black leading-tight text-slate-900 dark:text-white md:text-6xl">{hero.name}</h1>
+          <p className="text-lg font-semibold text-cyan-600 dark:text-cyan-300 md:text-2xl">{hero.stack}</p>
+          <p className="max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 md:text-lg">{hero.summary}</p>
+          <p className="font-mono text-sm text-slate-500 dark:text-slate-400">{hero.code1}</p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#contact"
@@ -23,7 +23,7 @@ const Hero = () => {
             </a>
             <a
               href="#projects"
-              className="rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-slate-100 transition hover:border-cyan-300 hover:text-cyan-300"
+              className="rounded-full border border-slate-300 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-slate-800 transition hover:border-cyan-600 hover:text-cyan-600 dark:border-white/20 dark:text-slate-100 dark:hover:border-cyan-300 dark:hover:text-cyan-300"
             >
               View Work
             </a>
@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
 
         <div className="space-y-6">
-          <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-3 shadow-2xl shadow-cyan-900/30">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-3 shadow-2xl shadow-cyan-900/10 dark:border-white/10 dark:bg-slate-900/60 dark:shadow-cyan-900/30">
             <img src={hero.profileImage} alt={hero.name} className="h-80 w-full rounded-2xl object-cover" />
           </div>
         </div>
@@ -39,14 +39,14 @@ const Hero = () => {
 
       <div id="careers" className="mt-8 grid gap-4 md:grid-cols-2">
         {CareerTracksData.map((track) => (
-          <article key={track.id} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <h3 className="text-lg font-bold text-white">{track.title}</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-300">{track.blurb}</p>
+          <article key={track.id} className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-slate-900/60">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white">{track.title}</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">{track.blurb}</p>
             <ul className="mt-4 flex flex-wrap gap-2">
               {track.highlights.map((highlight) => (
                 <li
                   key={highlight}
-                  className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200"
+                  className="rounded-full border border-cyan-600/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-600 dark:border-cyan-400/30 dark:text-cyan-200"
                 >
                   {highlight}
                 </li>

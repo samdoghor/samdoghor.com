@@ -1,45 +1,39 @@
 import { TechnologiesData, TechnologiesDData } from "./Data";
 
 const Technologies = () => {
+  const groupedTechnologies = TechnologiesDData.reduce((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = [];
+    }
+    acc[item.category].push(item);
+    return acc;
+  }, {});
+
   return (
-    <>
-      <div className="w-full pt-10 min-h-full overflow-hidden mt-10" id="stack">
-        <div>
-          {TechnologiesData.map((d, index) => (
-            <div key={index}>
-              <p className="text-white text-6xl font-semibold overflow-hidden leading-snug md:leading-normal font-novaSquare">
-                {d.heading}
-              </p>
+    <section className="pt-24" id="stack">
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">Skills & Tools</p>
+      <h2 className="mt-4 text-4xl font-black text-white md:text-5xl">{TechnologiesData[0].heading}</h2>
+      <p className="mt-4 text-base text-slate-300">{TechnologiesData[0].subtitle}</p>
+
+      <div className="mt-10 grid gap-5">
+        {Object.entries(groupedTechnologies).map(([category, items]) => (
+          <div key={category} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">{category}</h3>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {items.map((item) => (
+                <span
+                  key={item.id}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-200"
+                >
+                  <span className="text-cyan-300">{item.icon}</span>
+                  {item.label}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="w-full mt-10">
-          <div
-            data-aos="fade-right"
-            className="grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3"
-          >
-            {TechnologiesDData.map((d, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-2xl drop-shadow-md hover:animate-pulse hover:cursor-pointer"
-              >
-                <div>
-                  <div className="grid text-4xl text-white font-nova tracking-wider overflow-hidden font-bold p-1 justify-items-center">
-                    <span className="text-center"> {d.icon} </span>
-                  </div>
-                  <div className="p-1 rounded-full text-primary-ylogo font-novaSquare font-bold tracking-wide text-center">
-                    {d.category}
-                  </div>
-                  <div className="pb-8 rounded-full text-white font-inconsolata font-normal tracking-wide text-center text-normal">
-                    {d.label}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
-        </div>
+        ))}
       </div>
-    </>
+    </section>
   );
 };
 

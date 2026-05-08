@@ -2,8 +2,6 @@ import { Helmet } from "react-helmet";
 import { ScrollToTop } from "../Index";
 import { FaCalendarCheck, FaClock } from "react-icons/fa";
 import { Button } from "flowbite-react";
-import { Link } from "react-router-dom";
-
 const Gide = () => {
   return (
     <>

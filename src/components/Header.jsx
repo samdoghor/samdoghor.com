@@ -1,42 +1,61 @@
-import { Flowbite, Navbar } from "flowbite-react";
+import { useState } from "react";
 import { headerLogoData, headerNavData } from "./Data";
-import { customTheme } from "../flowbiteTheme";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <>
-      <Flowbite theme={{ theme: customTheme }}>
-        <Navbar
-          fluid
-          rounded
-          className="fixed w-full z-20 top-0 start-0 px-4 md:px-32 trans-nav"
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+        <a href={headerLogoData[0].link2} className="flex items-center gap-3">
+          <span className="text-sm font-bold tracking-widest text-cyan-300">{headerLogoData[0].logo}</span>
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-100">
+            {headerLogoData[0].name}
+          </span>
+        </a>
+
+        <button
+          className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-slate-100 md:hidden"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Toggle menu"
         >
-          <a href={headerLogoData[0].link2}>
-            <Navbar.Brand className="text-xl font-bold md:text-2xl text-primary-logo">
-              {headerLogoData[0].logo}
-              <span className="self-center whitespace-nowrap text-sm font-semibold dark:text-white font-novaSquare">
-                {headerLogoData[0].name}
-              </span>
-            </Navbar.Brand>
-          </a>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
-            {headerNavData.map((d, index) => (
-              <Navbar.Link
-                key={index}
-                href={d.link}
-                className="text-white md:hover:text-primary-logo tracking-wider font-inconsolata"
-                target={d.target}
+          Menu
+        </button>
+
+        <ul className="hidden items-center gap-6 md:flex">
+          {headerNavData.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.link}
+                className="text-xs font-medium uppercase tracking-[0.2em] text-slate-300 transition hover:text-cyan-300"
+                target={item.target}
+                rel={item.target === "_blank" ? "noreferrer" : undefined}
               >
-                <p className="">
-                  {d.nav} {d.icon}
-                </p>
-              </Navbar.Link>
-            ))}
-          </Navbar.Collapse>
-        </Navbar>
-      </Flowbite>
-    </>
+                {item.nav}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {isOpen ? (
+        <ul className="space-y-3 border-t border-white/10 px-6 py-4 md:hidden">
+          {headerNavData.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.link}
+                className="block text-xs font-medium uppercase tracking-[0.2em] text-slate-300"
+                onClick={() => setIsOpen(false)}
+                target={item.target}
+                rel={item.target === "_blank" ? "noreferrer" : undefined}
+              >
+                {item.nav}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </header>
   );
 };
 

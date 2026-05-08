@@ -34,25 +34,26 @@ const Hero = () => {
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-3 shadow-2xl shadow-cyan-900/30">
             <img src={hero.profileImage} alt={hero.name} className="h-80 w-full rounded-2xl object-cover" />
           </div>
-          <div id="careers" className="grid gap-4 md:grid-cols-2">
-            {CareerTracksData.map((track) => (
-              <article key={track.id} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                <h3 className="text-lg font-bold text-white">{track.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-300">{track.blurb}</p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {track.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200"
-                    >
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
         </div>
+      </div>
+
+      <div id="careers" className="mt-8 grid gap-4 md:grid-cols-2">
+        {CareerTracksData.map((track) => (
+          <article key={track.id} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+            <h3 className="text-lg font-bold text-white">{track.title}</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-300">{track.blurb}</p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {track.highlights.map((highlight) => (
+                <li
+                  key={highlight}
+                  className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200"
+                >
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

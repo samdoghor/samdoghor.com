@@ -107,7 +107,7 @@ export const ProjectDData = [
     Website: "#",
     Description:
       "A CLI toolkit that scaffolds Python web projects with opinionated templates and guided setup.",
-    Image: "/img/myte.png",
+    Image: "/img/project-myte.svg",
     Status: "Active",
     Domain: "Software",
   },
@@ -118,7 +118,7 @@ export const ProjectDData = [
     Website: "#",
     Description:
       "Prepared and updated piping layouts, isometrics, P&IDs, and supporting engineering deliverables for refinery upgrade and maintenance activities.",
-    Image: "/img/portfolio.png",
+    Image: "/img/project-phrc-refinery.svg",
     Status: "Delivered",
     Domain: "Piping",
   },
@@ -129,7 +129,7 @@ export const ProjectDData = [
     Website: "#",
     Description:
       "REST API platform that structures Nigerian dishes data with Flask and PostgreSQL for easy integration.",
-    Image: "/img/the_nigeria_food_db_api.png",
+    Image: "/img/project-food-db.svg",
     Status: "In Development",
     Domain: "Software",
   },
@@ -140,7 +140,7 @@ export const ProjectDData = [
     Website: "#",
     Description:
       "Supported piping design documentation, routing updates, and coordination deliverables for river-crossing execution work packages.",
-    Image: "/img/portfolio.png",
+    Image: "/img/project-obama-brass.svg",
     Status: "Completed",
     Domain: "Piping",
   },

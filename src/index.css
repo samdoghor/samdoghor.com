@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Braah+One&family=Caveat&family=Chakra+Petch:wght@300&family=Genos:wght@300&family=Hubballi&family=Nova+Mono&family=Ubuntu:wght@300&family=Inconsolata&family=Nova+Square&family=Anton&family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,77 +6,61 @@
 
 * {
   scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
+  color: #e2e8f0;
   overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-  width: 0.4em;
+  width: 0.55em;
 }
 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  background: #0f172a;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #09090b;
-  outline: 0.1px solid #09090b;
-}
-
-.trans-nav {
-  box-sizing: border-box;
-  background-color: rgba(17, 19, 25, 0.94);
-}
-
-.ontop {
-  z-index: 2;
-  transition: 1s;
-}
-.ontop-2x {
-  z-index: 4;
-  transition: 1s;
+  background-color: #334155;
+  border-radius: 999px;
 }
 
 .scroll-to-top-button {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
-  color: #fff;
-  border: none;
+  bottom: 24px;
+  right: 24px;
+  color: #e2e8f0;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
   border-radius: 50%;
-  padding: 10px;
+  width: 42px;
+  height: 42px;
   display: none;
   cursor: pointer;
-  z-index: 9999;
-  font-size: 1.5em;
-  transition: 0.6s;
+  z-index: 60;
+  font-size: 1.2rem;
+  transition: 0.25s ease;
 }
 
 .scroll-to-top-button.visible {
-  display: block;
-  animation: rotate360 2s linear infinite;
-}
-
-@keyframes rotate360 {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-to-top-button.visible:hover {
-  font-size: 1.5em;
-  animation: rotate360 2s linear;
+  border-color: rgba(34, 211, 238, 0.7);
+  color: #22d3ee;
 }
 
 @layer base {

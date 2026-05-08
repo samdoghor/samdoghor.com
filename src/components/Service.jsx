@@ -1,40 +1,33 @@
+import { ServiceData, ServiceStatsData } from "./Data";
+import resumePdf from "../assets/Samuel Doghor - Software Engineer_s.pdf";
+
 const Service = () => {
   return (
-    <>
-      <div className="pb-20">
-        <div>
-          <div className="w-full grid lg:grid-cols-3 text-center">
-            <div className="w-full py-4">
-              <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
-                05+ Years
-              </p>
-              <p className="overflow-hidden text-white">of Experience </p>
+    <section className="pt-24">
+      <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 md:p-12">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">Professional Value</p>
+        <p className="mt-4 max-w-4xl text-base leading-8 text-slate-300 md:text-lg">{ServiceData[0].service}</p>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {ServiceStatsData.map((stat) => (
+            <div key={stat.id} className="rounded-2xl border border-white/10 bg-slate-950/80 p-5">
+              <p className="text-3xl font-black text-white">{stat.value}</p>
+              <p className="mt-2 text-sm uppercase tracking-widest text-slate-400">{stat.label}</p>
             </div>
-            <div className="w-full py-4">
-              <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
-                18+
-              </p>
-              <p className="overflow-hidden text-white"> Projects Completed </p>
-            </div>
-            <div className="w-full py-4">
-              <p className="overflow-hidden text-3xl font-extrabold text-gray-400">
-                04+
-              </p>
-              <p className="overflow-hidden text-white"> Companies Worked </p>
-            </div>
-          </div>
-          <div className="text-center overflow-hidden my-10">
-            <a
-              href="src/assets/Samuel Doghor - Software Engineer_s.pdf"
-              className="overflow-hidden text-white text-xl font-bold hover:underline"
-              download
-            >
-              Get my latest Resume ⚡
-            </a>
-          </div>
+          ))}
+        </div>
+
+        <div className="mt-10">
+          <a
+            href={resumePdf}
+            className="inline-flex rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-cyan-300 transition hover:border-cyan-200 hover:text-cyan-200"
+            download
+          >
+            Download Resume
+          </a>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

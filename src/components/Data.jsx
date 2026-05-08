@@ -15,84 +15,70 @@ import {
   DiPostgresql,
   DiMysql,
   DiMongodb,
-  DiHeroku,
   DiDocker,
   DiDjango,
 } from "react-icons/di";
-import { MdFlashOn, MdMarkEmailRead, MdOutlineWhatsapp } from "react-icons/md";
+import { MdMarkEmailRead, MdOutlineWhatsapp } from "react-icons/md";
 import FlaskOriginal from "react-devicons/flask/original-wordmark";
 import KubernetesPlain from "react-devicons/kubernetes/plain";
 import TypescriptPlain from "react-devicons/typescript/plain";
 import NodejsPlain from "react-devicons/nodejs/plain";
-import {
-  SiPostman,
-  SiSwagger,
-  SiMarkdown,
-  SiWindows,
-  SiVercel,
-  SiRender,
-} from "react-icons/si";
+import { SiPostman, SiSwagger, SiMarkdown, SiWindows, SiVercel } from "react-icons/si";
 import Typewriter from "react-ts-typewriter";
 
 const currentYear = new Date().getFullYear();
-
-// Header
 
 export const headerLogoData = [
   {
     id: 1,
     logo: "<SD />",
-    name: "Samuel, Doghor",
-    link: "https://github.com/samdoghor/samdoghor.com",
+    name: "Samuel Doghor",
     link2: "/",
   },
 ];
 
 export const headerNavData = [
-  {
-    id: 1,
-    nav: "Portfolio",
-    link: "/",
-  },
-  {
-    id: 2,
-    nav: "Blog",
-    link: "/blog",
-  },
-  {
-    id: 3,
-    nav: "Courses",
-    link: "/courses",
-  },
-  {
-    id: 4,
-    nav: "Contact",
-    link: "/contact",
-  },
+  { id: 1, nav: "Home", link: "/" },
+  { id: 2, nav: "Careers", link: "/#careers" },
+  { id: 3, nav: "Projects", link: "/#projects" },
+  { id: 4, nav: "Stack", link: "/#stack" },
+  { id: 5, nav: "Contact", link: "/#contact" },
+  { id: 6, nav: "Blog", link: "/blog" },
 ];
 
 export const HeroData = [
   {
     id: 1,
-    name: "Samuel, Doghor",
-    stack: "Software Engineer",
+    name: "Samuel Doghor",
+    stack: "Software Engineer • Piping Engineer",
+    summary:
+      "I design and deliver robust software systems and practical piping engineering solutions for critical infrastructure projects.",
+    profileImage: "/img/doghs.jpg",
     code1: (
       <Typewriter
-        loop={true}
-        speed={100}
+        loop
+        speed={80}
         delay={2000}
-        text=' "const App = () => {return (<div >App </div>)} export default App" '
+        text=' "Building reliable systems in code and in physical infrastructure." '
       />
     ),
-    code2: ' "const App = () => {return (<div > ',
-    code3: (
-      <Typewriter
-        loop={true}
-        speed={100}
-        delay={2000}
-        text=' App </div>)} export default App" '
-      />
-    ),
+  },
+];
+
+export const CareerTracksData = [
+  {
+    id: 1,
+    title: "Software Engineering",
+    blurb:
+      "Backend-first engineer focused on APIs, platform architecture, automation, and maintainable developer experiences.",
+    highlights: ["Python & JavaScript", "API & System Design", "Cloud Deployment"],
+  },
+  {
+    id: 2,
+    title: "Piping Engineering",
+    blurb:
+      "Piping engineer supporting drafting, routing strategy, fabrication packages, and field-ready technical documentation.",
+    highlights: ["Piping Layout", "Isometric Workflows", "Construction Support"],
   },
 ];
 
@@ -100,26 +86,24 @@ export const ServiceData = [
   {
     id: 1,
     service:
-      "Backend focused engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences.",
-    service2: "I design & build scalable systems",
+      "I operate at the intersection of digital and industrial delivery—building software that scales while understanding how engineering projects are planned and executed on site.",
   },
 ];
 
-export const TestimoniesData = [
-  {
-    id: 1,
-  },
+export const ServiceStatsData = [
+  { id: 1, value: "05+", label: "Years Building Solutions" },
+  { id: 2, value: "20+", label: "Projects Delivered" },
+  { id: 3, value: "02", label: "Career Tracks" },
+  { id: 4, value: "04+", label: "Companies Collaborated" },
 ];
 
-// Projects
+export const TestimoniesData = [{ id: 1 }];
 
 export const ProjectData = [
   {
-    in: 1,
-    text: "Featured Projects",
-    code1: (
-      <Typewriter loop={true} speed={100} delay={2000} text=" Loading... " />
-    ),
+    id: 1,
+    text: "Featured Work",
+    subtitle: "A selection of software and engineering projects.",
   },
 ];
 
@@ -130,9 +114,10 @@ export const ProjectDData = [
     GitHub: "https://github.com/samdoghor/myte",
     Website: "#",
     Description:
-      "Myte is a simple command-line tool for creating boilerplate code for python web projects. It simplifies the project setup process by providing a user-friendly interface to choose the project name, framework, and setup complexity.",
+      "A CLI toolkit that scaffolds Python web projects with opinionated templates and guided setup.",
     Image: "/img/myte.png",
     Status: "Active",
+    Domain: "Software",
   },
   {
     id: 2,
@@ -140,9 +125,10 @@ export const ProjectDData = [
     GitHub: "https://github.com/samdoghor/NG-food-DB-APIs",
     Website: "#",
     Description:
-      "The Nigerian Food Database API is a RESTful API built with Flask-RESTful and PostgreSQL to provide information on various Nigerian dishes.",
+      "REST API platform that structures Nigerian dishes data with Flask and PostgreSQL for easy integration.",
     Image: "/img/the_nigeria_food_db_api.png",
-    Status: "Development",
+    Status: "In Development",
+    Domain: "Software",
   },
   {
     id: 3,
@@ -150,215 +136,93 @@ export const ProjectDData = [
     GitHub: "https://github.com/samdoghor/GomerceBE",
     Website: "#",
     Description:
-      "E-commerce app enhanced with JWT authentication, SqlAlchemy, **SQLite** persistence and deployment scripts via Docker. It has all the ready-to-use bare minimum essentials.",
+      "Backend foundation for ecommerce workflows with auth, persistence, and deployment-focused architecture.",
     Image: "/img/gomerce.png",
-    Status: "Development",
+    Status: "In Development",
+    Domain: "Software",
+  },
+];
+
+export const PipingProjectsData = [
+  {
+    id: 1,
+    title: "Industrial Facility Piping Packages",
+    description:
+      "Contributed to piping package preparation, discipline coordination, and technical document readiness for industrial jobs.",
+  },
+  {
+    id: 2,
+    title: "Site-Oriented Engineering Support",
+    description:
+      "Supported practical routing decisions and constructability reviews to improve execution quality and safety outcomes.",
+  },
+  {
+    id: 3,
+    title: "Cross-Disciplinary Delivery",
+    description:
+      "Worked across software and engineering stakeholders to improve visibility, reporting, and project communication.",
   },
 ];
 
 export const TechnologiesData = [
   {
-    in: 1,
-    heading: "Technologies",
+    id: 1,
+    heading: "Technology Stack",
+    subtitle: "Core tools I use to design, build, and deliver.",
   },
 ];
 
 export const TechnologiesDData = [
-  {
-    id: 1,
-    label: "Git",
-    icon: <FaGitAlt />,
-    category: "Version C.",
-  },
-  {
-    id: 2,
-    label: "Python",
-    icon: <FaPython />,
-    category: "Language",
-  },
-  {
-    id: 3,
-    label: "Javascript",
-    icon: <DiJavascript />,
-    category: "Language",
-  },
-  {
-    id: 4,
-    label: "React",
-    icon: <DiReact />,
-    category: "Library",
-  },
-  {
-    id: 5,
-    label: "PostgreSQL",
-    icon: <DiPostgresql />,
-    category: "Database",
-  },
-  {
-    id: 6,
-    label: "MySQL",
-    icon: <DiMysql />,
-    category: "Database",
-  },
-  {
-    id: 7,
-    label: "MongDB",
-    icon: <DiMongodb />,
-    category: "Database",
-  },
-  {
-    id: 8,
-    label: "Heroku",
-    icon: <DiHeroku />,
-    category: "Cloud",
-  },
-  {
-    id: 9,
-    label: "Docker",
-    icon: <DiDocker />,
-    category: "Containerization",
-  },
-  {
-    id: 10,
-    label: "Django",
-    icon: <DiDjango />,
-    category: "Framework",
-  },
-  {
-    id: 11,
-    label: "Flask",
-    icon: <FlaskOriginal color="#FFFFFF" />,
-    category: "Framework",
-  },
-  {
-    id: 12,
-    label: "Kubernetes",
-    icon: <KubernetesPlain color="#FFFFFF" />,
-    category: "Orchestration",
-  },
-  {
-    id: 13,
-    label: "TypeScript",
-    icon: <TypescriptPlain color="#FFFFFF" />,
-    category: "Language",
-  },
-  {
-    id: 14,
-    label: "NodeJS",
-    icon: <NodejsPlain color="#FFFFFF" />,
-    category: "Runtime Env.",
-  },
-  {
-    id: 15,
-    label: "Vue",
-    icon: <FaVuejs />,
-    category: "Framework",
-  },
-  {
-    id: 16,
-    label: "Postman",
-    icon: <SiPostman />,
-    category: "Tester/Doc.",
-  },
-  {
-    id: 17,
-    label: "Swagger UI",
-    icon: <SiSwagger />,
-    category: "Documentation",
-  },
-  {
-    id: 18,
-    label: "MarkDown",
-    icon: <SiMarkdown />,
-    category: "Language",
-  },
-  {
-    id: 19,
-    label: "Ubuntu",
-    icon: <FaUbuntu />,
-    category: "OS",
-  },
-  {
-    id: 20,
-    label: "Windows",
-    icon: <SiWindows />,
-    category: "OS",
-  },
-  {
-    id: 21,
-    label: "Vercel",
-    icon: <SiVercel />,
-    category: "Deployment",
-  },
-  {
-    id: 22,
-    label: "Render",
-    icon: <SiRender />,
-    category: "Deployment",
-  },
+  { id: 1, label: "Git", icon: <FaGitAlt />, category: "Version Control" },
+  { id: 2, label: "Python", icon: <FaPython />, category: "Language" },
+  { id: 3, label: "JavaScript", icon: <DiJavascript />, category: "Language" },
+  { id: 4, label: "TypeScript", icon: <TypescriptPlain color="#FFFFFF" />, category: "Language" },
+  { id: 5, label: "React", icon: <DiReact />, category: "Frontend" },
+  { id: 6, label: "Node.js", icon: <NodejsPlain color="#FFFFFF" />, category: "Runtime" },
+  { id: 7, label: "PostgreSQL", icon: <DiPostgresql />, category: "Database" },
+  { id: 8, label: "MySQL", icon: <DiMysql />, category: "Database" },
+  { id: 9, label: "MongoDB", icon: <DiMongodb />, category: "Database" },
+  { id: 10, label: "Docker", icon: <DiDocker />, category: "DevOps" },
+  { id: 11, label: "Kubernetes", icon: <KubernetesPlain color="#FFFFFF" />, category: "DevOps" },
+  { id: 12, label: "Django", icon: <DiDjango />, category: "Backend" },
+  { id: 13, label: "Flask", icon: <FlaskOriginal color="#FFFFFF" />, category: "Backend" },
+  { id: 14, label: "Postman", icon: <SiPostman />, category: "API" },
+  { id: 15, label: "Swagger", icon: <SiSwagger />, category: "API" },
+  { id: 16, label: "Vue", icon: <FaVuejs />, category: "Frontend" },
+  { id: 17, label: "Vercel", icon: <SiVercel />, category: "Deployment" },
+  { id: 18, label: "Markdown", icon: <SiMarkdown />, category: "Docs" },
+  { id: 19, label: "Ubuntu", icon: <FaUbuntu />, category: "OS" },
+  { id: 20, label: "Windows", icon: <SiWindows />, category: "OS" },
 ];
 
 export const ContactData = [
   {
-    in: 1,
-    heading: "Contact",
-    title: "Quick Reach / Socials",
-    ticon: <MdFlashOn />,
+    id: 1,
+    heading: "Let’s Work Together",
+    title: "Open to software and piping engineering collaborations.",
     country: "/img/nigeria_flag.png",
     logo: "/img/manchester-united-logo.png",
     image: "/img/doghs.jpg",
+    email: "talkto@samdoghor.com",
+    whatsapp: "https://wa.me/qr/CGHZ23GBYBKLC1",
+    location: "Nigeria",
+    availability: "Available for freelance and full-time opportunities",
   },
 ];
 
 export const contactSocialData = [
-  {
-    id: 1,
-    label: "Email",
-    icon: <MdMarkEmailRead />,
-    link: "mailto:talkto@samdoghor.com",
-  },
-  {
-    id: 2,
-    label: "WhatsApp",
-    icon: <MdOutlineWhatsapp />,
-    link: "https://wa.me/qr/CGHZ23GBYBKLC1",
-  },
-  {
-    id: 3,
-    label: "Instagram",
-    icon: <FaInstagramSquare />,
-    link: "https://www.instagram.com/samdoghor",
-  },
-  {
-    id: 4,
-    label: "Github",
-    icon: <FaGithub />,
-    link: "https://www.github.com/samdoghor",
-  },
-  {
-    id: 5,
-    label: "LinkedIn",
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/samdoghor",
-  },
-  {
-    id: 6,
-    label: "Twitter",
-    icon: <FaTwitter />,
-    link: "https://www.twitter.com/samdoghor",
-  },
-  {
-    id: 7,
-    label: "Portfolio Repo",
-    icon: <FaGithub />,
-    link: "https://github.com/samdoghor/samdoghor.com",
-  },
+  { id: 1, label: "Email", icon: <MdMarkEmailRead />, link: "mailto:talkto@samdoghor.com" },
+  { id: 2, label: "WhatsApp", icon: <MdOutlineWhatsapp />, link: "https://wa.me/qr/CGHZ23GBYBKLC1" },
+  { id: 3, label: "Instagram", icon: <FaInstagramSquare />, link: "https://www.instagram.com/samdoghor" },
+  { id: 4, label: "Github", icon: <FaGithub />, link: "https://www.github.com/samdoghor" },
+  { id: 5, label: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/samdoghor" },
+  { id: 6, label: "Twitter", icon: <FaTwitter />, link: "https://www.twitter.com/samdoghor" },
 ];
 
 export const FooterData = [
   {
-    in: 1,
-    copyright: "All right reserved © Samuel Doghor ",
+    id: 1,
+    copyright: "All rights reserved © Samuel Doghor",
     year: currentYear,
   },
 ];

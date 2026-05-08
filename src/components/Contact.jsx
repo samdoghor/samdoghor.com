@@ -1,104 +1,54 @@
 import { ContactData, contactSocialData } from "./Data";
 
 const Contact = () => {
+  const profile = ContactData[0];
+
   return (
-    <>
-      <div
-        className="w-full pt-16 min-h-full overflow-hidden mt-10"
-        id="contact"
-      >
+    <section className="pt-24" id="contact">
+      <div className="grid gap-8 rounded-3xl border border-white/10 bg-slate-900/60 p-8 md:grid-cols-[1.1fr,1fr] md:p-12">
         <div>
-          <div>
-            {ContactData.map((d, index) => (
-              <div key={index}>
-                <p className="text-white text-6xl font-semibold overflow-hidden leading-snug md:leading-normal font-novaSquare">
-                  {d.heading}
-                </p>
-              </div>
-            ))}
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">Contact</p>
+          <h2 className="mt-4 text-4xl font-black text-white md:text-5xl">{profile.heading}</h2>
+          <p className="mt-5 text-base leading-8 text-slate-300">{profile.title}</p>
+          <p className="mt-5 text-sm text-slate-400">{profile.availability}</p>
+
+          <div className="mt-8 grid gap-3 text-sm text-slate-200">
+            <a href={`mailto:${profile.email}`} className="rounded-xl border border-white/10 px-4 py-3 transition hover:border-cyan-300 hover:text-cyan-300">
+              {profile.email}
+            </a>
+            <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="rounded-xl border border-white/10 px-4 py-3 transition hover:border-cyan-300 hover:text-cyan-300">
+              WhatsApp Chat
+            </a>
+            <p className="rounded-xl border border-white/10 px-4 py-3">Location: {profile.location}</p>
           </div>
-          <div className="pt-10">
-            <div className="w-full grid lg:grid-cols-2">
-              <div>
-                <div>
-                  {ContactData.map((d, index) => (
-                    <div key={index}>
-                      <p className="flex  text-primary-ylogo text-2xl align-middle gap-4 font-novaSquare">
-                        {d.ticon} {d.title}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 grid-rows-2 mt-6">
-                  {contactSocialData.map((d, index) => (
-                    <div key={index}>
-                      <a
-                        className="flex text-lg text-white items-center gap-2 mt-6 font-inconsolata"
-                        href={d.link}
-                        key={d.id}
-                        target="_blank"
-                        rel="noreferrer"
-                        data-aos="zoom-in"
-                      >
-                        {d.icon}
-                        {d.label}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <div>
-                  {ContactData.map((d, index) => (
-                    <div
-                      key={index}
-                      className="flex justify-center items-center gap-10 h-fit overflow-hidden pt-10 text-center font-novaSquare"
-                    >
-                      <a
-                        className="self-center  text-white font-semibold text-lg"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="center-bottom"
-                      >
-                        <img
-                          className="w-32 mb-8 rounded-full"
-                          alt="Nigeria Flag"
-                          src={d.country}
-                        />
-                        Nigeria
-                      </a>
-                      <a
-                        className="self-center  text-white font-semibold text-lg"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="center-bottom"
-                      >
-                        <img
-                          className="w-32 mb-8 rounded-full"
-                          alt="Manchester United Logo"
-                          src={d.logo}
-                        />
-                        Manchester United
-                      </a>
-                      <a
-                        className="self-center text-white font-semibold text-lg"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="center-bottom"
-                      >
-                        <img
-                          className="w-32 mb-8 self-center rounded-full"
-                          alt="Samuel, Doghor "
-                          src={d.image}
-                        />
-                        Samuel, Doghor
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        </div>
+
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-slate-950/80 p-4">
+            <img className="h-20 w-20 rounded-xl object-cover" alt="Samuel Doghor" src={profile.image} />
+            <div>
+              <p className="text-xs uppercase tracking-widest text-cyan-300">Samuel Doghor</p>
+              <p className="mt-1 text-sm text-slate-300">Software Engineer & Piping Engineer</p>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            {contactSocialData.map((item) => (
+              <a
+                key={item.id}
+                className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-300 hover:text-cyan-300"
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item.icon}
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

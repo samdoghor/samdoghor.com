@@ -7,7 +7,7 @@ const Jobs = () => {
   return (
     <>
       <div
-        className="container mx-auto px-4 md:px-32 bg-primary-bgcolor min-h-screen max-w-full"
+        className="container mx-auto px-4 md:px-32 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors min-h-screen max-w-full"
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />
@@ -35,15 +35,15 @@ const Jobs = () => {
               <div className="min-h-fit">
                 <div className="">
                   <div className="pt-14 md:pt-0">
-                    <p className="overflow-hidden font-genos text-6xl font-black tracking-wider text-white">
+                    <p className="overflow-hidden font-genos text-6xl font-black tracking-wider text-slate-900 dark:text-white">
                       Selected Coding works
                     </p>
-                    <p className="overflow-hidden text-xl py-2 leading-10 text-white">
+                    <p className="overflow-hidden text-xl py-2 leading-10 text-slate-600 dark:text-slate-300">
                       Some of my accomplishments.
                     </p>
                   </div>
                 </div>
-                <hr className="border-2 border-white" />
+                <hr className="border-2 border-slate-200 dark:border-white" />
               </div>
             </div>
           </div>

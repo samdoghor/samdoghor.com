@@ -33,6 +33,7 @@
     "follow-redirects": "^1.16.0",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.447.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-devicons": "^2.16.2",
     "react-dom": "^18.3.1",

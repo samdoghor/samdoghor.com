@@ -8,32 +8,32 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
   }, []);
   return (
     <>
-      <div className="min-h-[100vh] overflow-hidden">
-        <div className="text-white text-center py-24">
-          <p className="text-white pt-8 ps-3 lg:ps-10 text-2xl tracking-wide font-bold overflow-hidden">
+      <div className="min-h-[100vh] overflow-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors">
+        <div className="text-center py-24">
+          <p className="pt-8 ps-3 lg:ps-10 text-2xl tracking-wide font-bold overflow-hidden text-cyan-600 dark:text-cyan-400">
             {pagetitle}
           </p>
-          <p className="text-white font-normal tracking-wider py-10 mx-5 text-2xl lg:ps-10 lg:text-6xl font-bakbakOne overflow-hidden">
+          <p className="font-normal tracking-wider py-10 mx-5 text-2xl lg:ps-10 lg:text-6xl font-bakbakOne overflow-hidden">
             This page is undergoing revamping/construction
           </p>
-          <p className="text-white pt-8 mx-5 text-2xl lg:pt-20 lg:ps-10 tracking-wide overflow-hidden text-center">
-            <a href="tel:+2348031390921" className="py-1">
+          <p className="pt-8 mx-5 text-2xl lg:pt-20 lg:ps-10 tracking-wide overflow-hidden text-center text-slate-600 dark:text-slate-300">
+            <a href="tel:+2348031390921" className="py-1 hover:text-cyan-600 dark:hover:text-cyan-400">
               Any question? Reach out to me and I&apos;ll get back to you
               shortly.
               <br /> You can call +2348031390921
             </a>
           </p>
           <div className="text-center flex flex-row place-content-center">
-            <span className="text-white pt-8 mx-20 text-lg lg:pt-20 lg:ps-10 tracking-wide overflow-hidden">
+            <span className="pt-8 mx-20 text-lg lg:pt-20 lg:ps-10 tracking-wide overflow-hidden">
               <a
                 href="https://wa.me/message/ZU5MOCLXPWDRN1"
-                className="flex items-center py-1"
+                className="flex items-center py-1 hover:text-cyan-600 dark:hover:text-cyan-400"
               >
                 <MdOutlineWhatsapp className="mr-2" /> +234 (803) 139 0921
               </a>
               <a
                 href="mailto:talkto@samdoghor.tech"
-                className="flex items-center py-1"
+                className="flex items-center py-1 hover:text-cyan-600 dark:hover:text-cyan-400"
               >
                 <MdMarkEmailRead className="mr-2" /> talkto@samdoghor.tech
               </a>
@@ -41,11 +41,11 @@ const MaintenanceMode = ({ pagetitle, expectedCompletion }) => {
           </div>
 
           <div className="text-center flex flex-row place-content-center">
-            <span className="text-white pt-8 mx-20 text-lg lg:pt-20 lg:ps-10 tracking-wide overflow-hidden">
-              <p className="flex items-center py-1 text-orange-400">
+            <span className="pt-8 mx-20 text-lg lg:pt-20 lg:ps-10 tracking-wide overflow-hidden">
+              <p className="flex items-center py-1 text-orange-500 dark:text-orange-400 font-semibold">
                 Expected Completion Date:
               </p>
-              <p className="flex items-center py-1">{expectedCompletion}</p>
+              <p className="flex items-center py-1 text-slate-600 dark:text-slate-300">{expectedCompletion}</p>
             </span>
           </div>
         </div>

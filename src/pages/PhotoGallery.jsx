@@ -4,7 +4,7 @@ const PhotoGallery = () => {
   return (
     <>
       <div
-        className="container mx-auto px-4 md:px-32 bg-primary-bgcolor min-h-screen max-w-full"
+        className="container mx-auto px-4 md:px-32 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors min-h-screen max-w-full"
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <div>

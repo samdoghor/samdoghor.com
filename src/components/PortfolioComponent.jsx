@@ -6,19 +6,19 @@ const PortfolioComponent = ({ id, imageUrl, company, type, link }) => {
       <a className="overflow-hidden" href={link}>
         <div
           key={id}
-          className="min-h-[60vh] lg:min-h-[95vh] box-border border-gray-100 border-2 lg:mx-6 flex flex-col justify-end my-10 rounded-3xl shadow-lg shadow-black"
+          className="min-h-[60vh] lg:min-h-[95vh] box-border border-slate-200 dark:border-white/10 border-2 lg:mx-6 flex flex-col justify-end my-10 rounded-3xl shadow-xl transition-all hover:scale-[1.01]"
           style={{
-            backgroundImage: `linear-gradient(rgba(17, 19, 25, .8), rgba(17, 19, 25, 1)), url(${imageUrl})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${imageUrl})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
         >
-          <div className="relative p-4 text-white">
-            <p className="overflow-hidden text-right font-bold text-lg pb-2">
+          <div className="relative p-6 text-white bg-gradient-to-t from-black/80 to-transparent rounded-b-3xl">
+            <p className="overflow-hidden text-right font-bold text-2xl pb-2">
               {company}
             </p>
-            <p className="overflow-hidden text-right font-sansita">{type}</p>
+            <p className="overflow-hidden text-right font-sansita text-slate-200">{type}</p>
           </div>
         </div>
       </a>

@@ -4,7 +4,7 @@ import { Contact, Footer, Header, Hero, Project, ScrollToTop, Service, Technolog
 const Portfolio = () => {
   return (
     <>
-      <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors">
         <Header />
         <Helmet>
           <title>Portfolio | Samuel Doghor</title>

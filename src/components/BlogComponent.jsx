@@ -6,22 +6,22 @@ const BlogComponent = () => {
         id="projects"
       >
         <div>
-          <p className="text-white font-semibold text-6xl overflow-hidden leading-snug font-novaSquare">
+          <p className="text-slate-900 dark:text-white font-semibold text-6xl overflow-hidden leading-snug font-novaSquare">
             Blog Post
           </p>
         </div>
         <div className="overflow-hidden drop-shadow-xl pt-4">
           {/* Blog Iteration */}
           <div
-            className="w-full grid lg:grid-cols-2 rounded-3xl my-16 p-6 gap-8 bg-primary-pbgcolor"
+            className="w-full grid lg:grid-cols-2 rounded-3xl my-16 p-6 gap-8 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10"
             data-aos="zoom-out"
           >
             <div>
               <div>
-                <p className="text-primary-ylogo text-2xl font-semibold overflow-hidden pb-3 font-novaSquare">
+                <p className="text-cyan-600 dark:text-cyan-400 text-2xl font-semibold overflow-hidden pb-3 font-novaSquare">
                   Blog Title
                 </p>
-                <p className="pb-8 text-white text-lg leading-relaxed font-inconsolata font-thin tracking-wide">
+                <p className="pb-8 text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-inconsolata font-thin tracking-wide">
                   Blog
                 </p>
               </div>
@@ -34,7 +34,7 @@ const BlogComponent = () => {
                     src={project.Image}
                   /> */}
                 <div
-                  className="w-[100vw] md:w-[60vw] h-[30vh] rounded-[30px] border-t-[20px] border-l-[20px] border-white  border-solid z-10"
+                  className="w-[100vw] md:w-[60vw] h-[30vh] rounded-[30px] border-t-[20px] border-l-[20px] border-slate-200 dark:border-slate-800 border-solid z-10"
                   style={{
                     // backgroundImage: `url(${project.Image})`,
                     backgroundSize: "cover",

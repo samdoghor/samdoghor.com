@@ -64,7 +64,7 @@ const ContactForm = () => {
   return (
     <>
       <div
-        className="container mx-auto px-4 md:px-32 bg-primary-bgcolor min-h-screen max-w-full"
+        className="container mx-auto px-4 md:px-32 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors min-h-screen max-w-full"
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />
@@ -90,11 +90,11 @@ const ContactForm = () => {
           <div className="container mx-auto py-20">
             <div className="py-24 md:grid md:grid-cols-2 gap-20">
               <div className="">
-                <p className="text-5xl overflow-hidden font-novaSquare py-4 leading-12 text-white">
+                <p className="text-5xl overflow-hidden font-novaSquare py-4 leading-12 text-slate-900 dark:text-white">
                   {"Hi. Let's talk about your project."}
                 </p>
                 <motion.p
-                  className="text-lg overflow-hidden font-inconsolata py-4 leading-10 text-white"
+                  className="text-lg overflow-hidden font-inconsolata py-4 leading-10 text-slate-600 dark:text-slate-300"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 1 }}
@@ -104,7 +104,7 @@ const ContactForm = () => {
                     href="https://wa.me/qr/CGHZ23GBYBKLC1"
                     target="_blank"
                     rel="noreferrer"
-                    className="px-2 text-white underline underline-offset-4"
+                    className="px-2 text-cyan-600 dark:text-cyan-400 underline underline-offset-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}
@@ -116,7 +116,7 @@ const ContactForm = () => {
                     href="mailto:talkto@samdoghor.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="px-2 text-white underline underline-offset-4"
+                    className="px-2 text-cyan-600 dark:text-cyan-400 underline underline-offset-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}
@@ -128,7 +128,7 @@ const ContactForm = () => {
                     href="tel:+2348031390921"
                     target="_blank"
                     rel="noreferrer"
-                    className="ps-2 text-white underline underline-offset-4"
+                    className="ps-2 text-cyan-600 dark:text-cyan-400 underline underline-offset-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}
@@ -151,10 +151,10 @@ const ContactForm = () => {
                         name="companyName"
                         placeholder="Company Name"
                         autoFocus
-                        className="w-[50%] h-16 font-semibold text-base border-0 bg-gray-100 "
+                        className="w-[50%] h-16 font-semibold text-base border-0 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white px-4"
                         transition={{ duration: 1 }}
                         whileFocus={{
-                          borderBottom: "solid 5px #8aa3f2",
+                          borderBottom: "solid 5px #0891b2",
                         }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
@@ -169,10 +169,10 @@ const ContactForm = () => {
                         name="yourName"
                         placeholder="Your Name"
                         required
-                        className="w-[50%] h-16 font-semibold text-base border-0 bg-gray-100 "
+                        className="w-[50%] h-16 font-semibold text-base border-0 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white px-4"
                         transition={{ duration: 1 }}
                         whileFocus={{
-                          borderBottom: "solid 5px #8aa3f2",
+                          borderBottom: "solid 5px #0891b2",
                         }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
@@ -187,10 +187,10 @@ const ContactForm = () => {
                         name="phoneNumber"
                         placeholder="Phone Number"
                         required
-                        className="w-[50%] h-16 font-semibold text-base border-0 bg-gray-100 "
+                        className="w-[50%] h-16 font-semibold text-base border-0 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white px-4"
                         transition={{ duration: 1 }}
                         whileFocus={{
-                          borderBottom: "solid 5px #8aa3f2",
+                          borderBottom: "solid 5px #0891b2",
                         }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
@@ -205,10 +205,10 @@ const ContactForm = () => {
                         placeholder="Email Address"
                         required
                         type="email"
-                        className="w-[50%] h-16 font-semibold text-base border-0 bg-gray-100 "
+                        className="w-[50%] h-16 font-semibold text-base border-0 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white px-4"
                         transition={{ duration: 1 }}
                         whileFocus={{
-                          borderBottom: "solid 5px #8aa3f2",
+                          borderBottom: "solid 5px #0891b2",
                         }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
@@ -223,10 +223,10 @@ const ContactForm = () => {
                         placeholder="State your purpose of reaching out || Share the package you chose, project info: scope, timeline, and budget."
                         id="projectDetails"
                         name="projectDetails"
-                        className="w-[50%] font-semibold text-base border-0 bg-gray-100 "
+                        className="w-[50%] font-semibold text-base border-0 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white p-4"
                         transition={{ duration: 1 }}
                         whileFocus={{
-                          borderBottom: "solid 5px #8aa3f2",
+                          borderBottom: "solid 5px #0891b2",
                         }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
@@ -237,7 +237,7 @@ const ContactForm = () => {
                     <div className="mx-auto flex justify-center overflow-hidden">
                       <motion.button
                         type="submit"
-                        className="w-[50%] h-16 font-semibold border-0 bg-cyan-950 text-white hover:bg-cyan-700 hover:text-black text-xl overflow-hidden"
+                        className="w-[50%] h-16 font-semibold border-0 bg-cyan-600 text-white hover:bg-cyan-500 text-xl overflow-hidden rounded-lg transition-colors"
                         whileInView={{ width: "100%" }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
@@ -250,7 +250,7 @@ const ContactForm = () => {
                   </form>
 
                   {submissionStatus && (
-                    <p className="text-lg overflow-hidden py-4 leading-10 text-center font-bold font-sansita text-white">
+                    <p className="text-lg overflow-hidden py-4 leading-10 text-center font-bold font-sansita text-cyan-600 dark:text-cyan-400">
                       {submissionStatus}
                     </p>
                   )}

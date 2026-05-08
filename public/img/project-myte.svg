@@ -1,0 +1,16 @@
+<svg width="1366" height="768" viewBox="0 0 1366 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1366" height="768" fill="#020617"/>
+  <rect x="80" y="96" width="1206" height="576" rx="28" fill="#0F172A" stroke="#155E75" stroke-width="2"/>
+  <rect x="130" y="146" width="1106" height="80" rx="16" fill="#082F49"/>
+  <circle cx="176" cy="186" r="12" fill="#22D3EE"/>
+  <circle cx="216" cy="186" r="12" fill="#67E8F9"/>
+  <circle cx="256" cy="186" r="12" fill="#A5F3FC"/>
+  <text x="320" y="194" fill="#BAE6FD" font-size="28" font-family="monospace">myte init api-service</text>
+  <rect x="130" y="252" width="1106" height="350" rx="20" fill="#0B1120" stroke="#1E293B"/>
+  <text x="184" y="328" fill="#22D3EE" font-size="34" font-family="monospace">&gt; scaffold project</text>
+  <text x="184" y="386" fill="#7DD3FC" font-size="28" font-family="monospace">✓ Flask template</text>
+  <text x="184" y="436" fill="#7DD3FC" font-size="28" font-family="monospace">✓ Docker setup</text>
+  <text x="184" y="486" fill="#7DD3FC" font-size="28" font-family="monospace">✓ CI workflow</text>
+  <text x="184" y="536" fill="#7DD3FC" font-size="28" font-family="monospace">✓ API docs boilerplate</text>
+  <text x="184" y="598" fill="#67E8F9" font-size="42" font-family="monospace" font-weight="700">MYTE CLI TOOLKIT</text>
+</svg>

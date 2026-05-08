@@ -19,7 +19,7 @@ const Technologies = () => {
         {Object.entries(groupedTechnologies).map(([track, items]) => (
           <div key={track} className="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">{track}</h3>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
               {items.map((item) => (
                 <span
                   key={item.id}

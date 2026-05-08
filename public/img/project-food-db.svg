@@ -1,0 +1,20 @@
+<svg width="1366" height="768" viewBox="0 0 1366 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1366" height="768" fill="#020617"/>
+  <rect x="92" y="84" width="1182" height="600" rx="28" fill="#0F172A" stroke="#155E75" stroke-width="2"/>
+  <rect x="144" y="136" width="1080" height="124" rx="20" fill="#083344"/>
+  <text x="188" y="212" fill="#A5F3FC" font-size="44" font-family="system-ui" font-weight="700">Nigerian Food Database API</text>
+  <rect x="144" y="290" width="520" height="340" rx="20" fill="#0B1120" stroke="#1E293B"/>
+  <rect x="700" y="290" width="524" height="340" rx="20" fill="#0B1120" stroke="#1E293B"/>
+  <text x="184" y="356" fill="#67E8F9" font-size="30" font-family="monospace">GET /foods</text>
+  <text x="184" y="410" fill="#93C5FD" font-size="24" font-family="monospace">jollof-rice</text>
+  <text x="184" y="452" fill="#93C5FD" font-size="24" font-family="monospace">ofada-stew</text>
+  <text x="184" y="494" fill="#93C5FD" font-size="24" font-family="monospace">egusi-soup</text>
+  <text x="184" y="536" fill="#93C5FD" font-size="24" font-family="monospace">suya</text>
+  <text x="184" y="578" fill="#93C5FD" font-size="24" font-family="monospace">moimoi</text>
+  <text x="744" y="356" fill="#67E8F9" font-size="30" font-family="monospace">POST /foods</text>
+  <rect x="744" y="388" width="436" height="200" rx="14" fill="#082F49"/>
+  <text x="772" y="434" fill="#CFFAFE" font-size="22" font-family="monospace">{ "name": "pepper soup" }</text>
+  <text x="772" y="474" fill="#CFFAFE" font-size="22" font-family="monospace">{ "region": "south-south" }</text>
+  <text x="772" y="514" fill="#CFFAFE" font-size="22" font-family="monospace">{ "calories": 280 }</text>
+  <text x="772" y="554" fill="#CFFAFE" font-size="22" font-family="monospace">{ "protein": "high" }</text>
+</svg>

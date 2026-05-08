@@ -1,0 +1,16 @@
+<svg width="1366" height="768" viewBox="0 0 1366 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1366" height="768" fill="#020617"/>
+  <rect x="88" y="88" width="1190" height="592" rx="28" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <text x="136" y="172" fill="#F8FAFC" font-size="50" font-family="system-ui" font-weight="700">Obama Brass River Crossing</text>
+  <text x="136" y="222" fill="#94A3B8" font-size="28" font-family="system-ui">Routing coordination and crossing-package deliverables</text>
+  <rect x="136" y="268" width="1094" height="364" rx="20" fill="#111827" stroke="#1E293B"/>
+  <path d="M136 498C230 458 334 442 436 450C550 460 664 516 780 520C914 526 1036 458 1230 468V632H136V498Z" fill="#0C4A6E"/>
+  <path d="M136 466C252 426 374 410 496 422C612 434 730 484 850 488C980 494 1092 434 1230 442" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M190 412H402V374H600V424H836V362H1170" stroke="#22D3EE" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="402" cy="374" r="12" fill="#A5F3FC"/>
+  <circle cx="600" cy="424" r="12" fill="#A5F3FC"/>
+  <circle cx="836" cy="362" r="12" fill="#A5F3FC"/>
+  <rect x="188" y="324" width="74" height="160" rx="8" fill="#475569"/>
+  <rect x="552" y="308" width="74" height="176" rx="8" fill="#334155"/>
+  <rect x="1088" y="304" width="74" height="180" rx="8" fill="#475569"/>
+</svg>

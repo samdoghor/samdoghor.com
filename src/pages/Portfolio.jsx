@@ -12,11 +12,11 @@ const Portfolio = () => {
           <meta property="og:title" content="Portfolio | Samuel Doghor" />
           <meta
             property="description"
-            content="Samuel Doghor is a Software Engineer and Piping Engineer delivering scalable digital systems and practical engineering solutions."
+            content="Samuel Doghor is a Software Engineer and Piping Designer delivering scalable digital systems and practical engineering solutions."
           />
           <meta
             property="og:description"
-            content="Software Engineering and Piping Engineering portfolio of Samuel Doghor, focused on quality delivery across both domains."
+            content="Software Engineering and Piping Designer portfolio of Samuel Doghor, focused on quality delivery across both domains."
           />
           <meta property="image" content="/img/doghs.jpg" />
           <meta property="og:image" content="/img/doghs.jpg" />

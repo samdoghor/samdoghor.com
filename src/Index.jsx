@@ -16,7 +16,7 @@ import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
 import Jobs from "./pages/Jobs";
 import JobsCMS from "./pages/JobsCMS";
-import Gide from "./pages/Gide";
+// import Gide from "./pages/Gide";
 
 export {
   Contact,
@@ -36,5 +36,5 @@ export {
   Jobs,
   JobsCMS,
   BlogComponent,
-  Gide,
+  // Gide,
 };

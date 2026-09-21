@@ -7,7 +7,7 @@ import {
   ContactForm,
   JobsCMS,
   Jobs,
-  Gide,
+  // Gide,
 } from "./Index";
 const routers = createBrowserRouter([
   {
@@ -34,10 +34,10 @@ const routers = createBrowserRouter([
     path: "/jobs",
     element: <Jobs />,
   },
-  {
-    path: "/gide",
-    element: <Gide />,
-  },
+  // {
+  //   path: "/gide",
+  //   element: <Gide />,
+  // },
   {
     path: "*",
     element: <NotFound />,

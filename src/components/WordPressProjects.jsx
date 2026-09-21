@@ -85,9 +85,7 @@ const WordPressProjects = () => {
               />
               <a
                 className="mt-5 inline-block font-semibold text-cyan-600 hover:text-cyan-500 dark:text-cyan-300"
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
+                href={`/projects/${project.slug}`}
               >
                 View project
               </a>

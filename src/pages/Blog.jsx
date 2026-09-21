@@ -104,9 +104,7 @@ const Insights = () => {
                     />
                     <a
                       className="mt-6 inline-block font-semibold text-cyan-600 hover:text-cyan-500 dark:text-cyan-300"
-                      href={post.link}
-                      target="_blank"
-                      rel="noreferrer"
+                      href={`/insights/${post.slug}`}
                     >
                       Read article
                     </a>

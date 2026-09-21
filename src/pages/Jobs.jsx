@@ -5,7 +5,7 @@ const Jobs = () => {
   return (
     <>
       <div
-        className="container mx-auto px-4 md:px-32 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors min-h-screen max-w-full"
+        className="min-h-screen max-w-full bg-white text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100"
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />
@@ -50,7 +50,9 @@ const Jobs = () => {
             <WordPressProjects />
           </div>
         </div>
-        <Footer />
+        <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
+          <Footer />
+        </div>
         <ScrollToTop />
       </div>
     </>

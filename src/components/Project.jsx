@@ -13,7 +13,7 @@ const Project = () => {
       <WordPressProjects />
 
       <div className="mt-10 flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-widest">
-        <a href="/jobs" className="rounded-full border border-slate-200 dark:border-white/20 px-5 py-3 text-slate-600 dark:text-slate-200 transition hover:border-cyan-500 dark:hover:border-cyan-300 hover:text-cyan-600 dark:hover:text-cyan-300" target="_blank" rel="noreferrer">
+        <a href="/projects" className="rounded-full border border-slate-200 dark:border-white/20 px-5 py-3 text-slate-600 dark:text-slate-200 transition hover:border-cyan-500 dark:hover:border-cyan-300 hover:text-cyan-600 dark:hover:text-cyan-300" target="_blank" rel="noreferrer">
           More
         </a>
       </div>

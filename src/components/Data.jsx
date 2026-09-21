@@ -31,7 +31,7 @@ export const headerLogoData = [
 
 export const headerNavData = [
   { id: 1, nav: "Home", link: "/" },
-  { id: 2, nav: "Projects", link: "/#projects" },
+  { id: 2, nav: "Projects", link: "/projects" },
   { id: 3, nav: "Insights", link: "/insights" },
   { id: 4, nav: "Marketplace", link: "/marketplace" },
   { id: 5, nav: "Contact", link: "/contact" },

@@ -8,6 +8,7 @@ import {
   Marketplace,
   JobsCMS,
   Jobs,
+  WordPressPost,
   // Gide,
 } from "./Index";
 const routers = createBrowserRouter([
@@ -18,6 +19,10 @@ const routers = createBrowserRouter([
   {
     path: "/insights",
     element: <Knowledge />,
+  },
+  {
+    path: "/insights/:slug",
+    element: <WordPressPost categorySlug="samdoghor" label="Insight" />,
   },
   {
     path: "/marketplace",
@@ -36,8 +41,12 @@ const routers = createBrowserRouter([
     element: <JobsCMS />,
   },
   {
-    path: "/jobs",
+    path: "/projects",
     element: <Jobs />,
+  },
+  {
+    path: "/projects/:slug",
+    element: <WordPressPost categorySlug="samdoghor-projects" label="Project" />,
   },
   // {
   //   path: "/gide",

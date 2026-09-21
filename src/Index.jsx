@@ -19,6 +19,7 @@ import Portfolio from "./pages/Portfolio";
 import Jobs from "./pages/Jobs";
 import JobsCMS from "./pages/JobsCMS";
 import Marketplace from "./pages/Marketplace";
+import WordPressPost from "./pages/WordPressPost";
 // import Gide from "./pages/Gide";
 
 export {
@@ -42,5 +43,6 @@ export {
   BlogComponent,
   WordPressProjects,
   SpotifySection,
+  WordPressPost,
   // Gide,
 };

@@ -1,5 +1,5 @@
 import Helmet from "react-helmet";
-import { Contact, Footer, Header, Hero, Project, ScrollToTop, Service, Technologies } from "../Index";
+import { Contact, Footer, Header, Hero, Project, ScrollToTop, Service, SpotifySection, Technologies } from "../Index";
 
 const Portfolio = () => {
   return (
@@ -24,6 +24,7 @@ const Portfolio = () => {
 
         <main className="mx-auto w-full max-w-6xl px-6 pb-10 md:px-8">
           <Hero />
+          <SpotifySection />
           <Service />
           <Project />
           <Technologies />

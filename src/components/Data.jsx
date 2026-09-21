@@ -31,11 +31,10 @@ export const headerLogoData = [
 
 export const headerNavData = [
   { id: 1, nav: "Home", link: "/" },
-  { id: 2, nav: "Careers", link: "/#careers" },
-  { id: 3, nav: "Projects", link: "/#projects" },
-  { id: 4, nav: "Stack", link: "/#stack" },
-  { id: 5, nav: "Contact", link: "/#contact" },
-  { id: 6, nav: "Blog", link: "/blog" },
+  { id: 2, nav: "Projects", link: "/#projects" },
+  { id: 3, nav: "Insights", link: "/insights" },
+  { id: 4, nav: "Marketplace", link: "/marketplace" },
+  { id: 5, nav: "Contact", link: "/contact" },
 ];
 
 export const HeroData = [

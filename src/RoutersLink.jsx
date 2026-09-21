@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import {
   Portfolio,
-  Blog,
+  Knowledge,
   NotFound,
   Courses,
   ContactForm,
+  Marketplace,
   JobsCMS,
   Jobs,
   // Gide,
@@ -15,8 +16,12 @@ const routers = createBrowserRouter([
     element: <Portfolio />,
   },
   {
-    path: "/blog",
-    element: <Blog />,
+    path: "/insights",
+    element: <Knowledge />,
+  },
+  {
+    path: "/marketplace",
+    element: <Marketplace />,
   },
   {
     path: "/courses",

@@ -29,17 +29,19 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        // "http://127.0.0.1:5000/contact-samdoghor",
-        "https://entity-backend.vercel.app/contact-samdoghor",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+          subject: "New contact form submission from samdoghor.com",
+          from_name: formData.yourName,
+          ...formData,
+        }),
+      });
 
       if (response.ok) {
         setSubmissionStatus(
@@ -54,9 +56,9 @@ const ContactForm = () => {
           "Your request was not successful, please try again."
         );
       }
-      // } catch (error) {
-      //   console.error("Error sending message:", error);
-      //   setSubmissionStatus("Failed to send message.");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setSubmissionStatus("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -143,6 +145,7 @@ const ContactForm = () => {
                     autoComplete="on"
                     name="contactForm"
                     id="contactForm"
+                    onSubmit={handleSubmit}
                   >
                     <div className="my-12">
                       <motion.input
@@ -242,7 +245,6 @@ const ContactForm = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                         disabled={isSubmitting}
-                        onClick={handleSubmit}
                       >
                         {isSubmitting ? "Submitting..." : "Submit request"}
                       </motion.button>

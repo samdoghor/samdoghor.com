@@ -8,15 +8,19 @@ import Technologies from "./components/Technologies";
 import Testimonies from "./components/Testimonies";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogComponent from "./components/BlogComponent";
+import WordPressProjects from "./components/WordPressProjects";
+import SpotifySection from "./components/SpotifySection";
 
-import Blog from "./pages/Blog";
+import Knowledge from "./pages/Blog";
 import ContactForm from "./pages/ContactForm";
 import Courses from "./pages/Courses";
 import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
 import Jobs from "./pages/Jobs";
 import JobsCMS from "./pages/JobsCMS";
-import Gide from "./pages/Gide";
+import Marketplace from "./pages/Marketplace";
+import WordPressPost from "./pages/WordPressPost";
+// import Gide from "./pages/Gide";
 
 export {
   Contact,
@@ -28,13 +32,17 @@ export {
   Technologies,
   Testimonies,
   ScrollToTop,
-  Blog,
+  Knowledge,
   ContactForm,
+  Marketplace,
   Courses,
   NotFound,
   Portfolio,
   Jobs,
   JobsCMS,
   BlogComponent,
-  Gide,
+  WordPressProjects,
+  SpotifySection,
+  WordPressPost,
+  // Gide,
 };

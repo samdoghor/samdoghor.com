@@ -1,13 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import {
   Portfolio,
-  Blog,
+  Knowledge,
   NotFound,
   Courses,
   ContactForm,
+  Marketplace,
   JobsCMS,
   Jobs,
-  Gide,
+  WordPressPost,
+  // Gide,
 } from "./Index";
 const routers = createBrowserRouter([
   {
@@ -15,8 +17,16 @@ const routers = createBrowserRouter([
     element: <Portfolio />,
   },
   {
-    path: "/blog",
-    element: <Blog />,
+    path: "/insights",
+    element: <Knowledge />,
+  },
+  {
+    path: "/insights/:slug",
+    element: <WordPressPost categorySlug="samdoghor" label="Insight" />,
+  },
+  {
+    path: "/marketplace",
+    element: <Marketplace />,
   },
   {
     path: "/courses",
@@ -31,13 +41,17 @@ const routers = createBrowserRouter([
     element: <JobsCMS />,
   },
   {
-    path: "/jobs",
+    path: "/projects",
     element: <Jobs />,
   },
   {
-    path: "/gide",
-    element: <Gide />,
+    path: "/projects/:slug",
+    element: <WordPressPost categorySlug="samdoghor-projects" label="Project" />,
   },
+  // {
+  //   path: "/gide",
+  //   element: <Gide />,
+  // },
   {
     path: "*",
     element: <NotFound />,

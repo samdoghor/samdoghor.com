@@ -31,20 +31,19 @@ export const headerLogoData = [
 
 export const headerNavData = [
   { id: 1, nav: "Home", link: "/" },
-  { id: 2, nav: "Careers", link: "/#careers" },
-  { id: 3, nav: "Projects", link: "/#projects" },
-  { id: 4, nav: "Stack", link: "/#stack" },
-  { id: 5, nav: "Contact", link: "/#contact" },
-  { id: 6, nav: "Blog", link: "/blog" },
+  { id: 2, nav: "Projects", link: "/projects" },
+  { id: 3, nav: "Insights", link: "/insights" },
+  { id: 4, nav: "Marketplace", link: "/marketplace" },
+  { id: 5, nav: "Contact", link: "/contact" },
 ];
 
 export const HeroData = [
   {
     id: 1,
     name: "Samuel Doghor",
-    stack: "Software Engineer • Piping Engineer",
+    stack: "Software Engineer • Piping Designer",
     summary:
-      "I design and deliver robust software systems and practical piping engineering solutions for critical infrastructure projects.",
+      "I design and deliver robust software systems and practical piping designing solutions for critical infrastructure projects.",
     profileImage: "/img/doghs.jpg",
     code1: (
       <Typewriter
@@ -67,10 +66,10 @@ export const CareerTracksData = [
   },
   {
     id: 2,
-    title: "Piping Engineering",
+    title: "Piping Designer",
     blurb:
-      "Piping engineer supporting drafting, routing strategy, fabrication packages, and field-ready technical documentation.",
-    highlights: ["Piping Layout", "Isometric Workflows", "Construction Support"],
+      "Piping designer supporting drafting, routing strategy, fabrication packages, and field-ready technical documentation.",
+    highlights: ["3D Modeling", "Piping Layout", "Isometric Workflows"],
   },
 ];
 
@@ -78,7 +77,7 @@ export const ServiceData = [
   {
     id: 1,
     service:
-      "I deliver value across two tracks: robust backend software systems and practical piping/CAD engineering support for real-world industrial execution.",
+      "I deliver value across two tracks: robust backend software systems and practical piping/CAD designing support for real-world industrial execution.",
   },
 ];
 

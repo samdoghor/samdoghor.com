@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-const WORDPRESS_API = "https://www.lander.vivirgros.com/wp-json/wp/v2";
+import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
 
 const WordPressProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -8,18 +7,14 @@ const WordPressProjects = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const loadProjects = async () => {
       try {
-        const categoryResponse = await fetch(
-          `${WORDPRESS_API}/categories?slug=samdoghor-projects`
+        const category = await getWordPressCategory(
+          "samdoghor-projects",
+          controller.signal
         );
-
-        if (!categoryResponse.ok) {
-          throw new Error("Unable to find the projects category.");
-        }
-
-        const categories = await categoryResponse.json();
-        const category = categories[0];
 
         if (!category) {
           setProjects([]);
@@ -27,7 +22,8 @@ const WordPressProjects = () => {
         }
 
         const postsResponse = await fetch(
-          `${WORDPRESS_API}/posts?categories=${category.id}&_embed&per_page=20`
+          `${WORDPRESS_API_URL}/posts?categories=${category.id}&_embed&per_page=20&_fields=id,title,excerpt,slug,_embedded`,
+          { signal: controller.signal }
         );
 
         if (!postsResponse.ok) {
@@ -36,6 +32,10 @@ const WordPressProjects = () => {
 
         setProjects(await postsResponse.json());
       } catch (fetchError) {
+        if (fetchError.name === "AbortError") {
+          return;
+        }
+
         setError(fetchError.message);
       } finally {
         setIsLoading(false);
@@ -43,6 +43,8 @@ const WordPressProjects = () => {
     };
 
     loadProjects();
+
+    return () => controller.abort();
   }, []);
 
   if (isLoading) {

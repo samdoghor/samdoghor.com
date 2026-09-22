@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 import { Footer, Header, ScrollToTop } from "../Index";
-
-const WORDPRESS_API = "https://www.lander.vivirgros.com/wp-json/wp/v2";
+import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
 
 const WordPressPost = ({ categorySlug, label }) => {
   const { slug } = useParams();
@@ -13,20 +12,19 @@ const WordPressPost = ({ categorySlug, label }) => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const loadPost = async () => {
       try {
-        const categoryResponse = await fetch(
-          `${WORDPRESS_API}/categories?slug=${categorySlug}`
-        );
-        const categories = await categoryResponse.json();
-        const category = categories[0];
+        const category = await getWordPressCategory(categorySlug, controller.signal);
 
         if (!category) {
           throw new Error(`Unable to find the ${label.toLowerCase()} category.`);
         }
 
         const postResponse = await fetch(
-          `${WORDPRESS_API}/posts?slug=${encodeURIComponent(slug)}&_embed`
+          `${WORDPRESS_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed&_fields=id,date,title,content,categories,_embedded`,
+          { signal: controller.signal }
         );
 
         if (!postResponse.ok) {
@@ -44,6 +42,10 @@ const WordPressPost = ({ categorySlug, label }) => {
 
         setPost(matchingPost);
       } catch (fetchError) {
+        if (fetchError.name === "AbortError") {
+          return;
+        }
+
         setError(fetchError.message);
       } finally {
         setIsLoading(false);
@@ -51,6 +53,8 @@ const WordPressPost = ({ categorySlug, label }) => {
     };
 
     loadPost();
+
+    return () => controller.abort();
   }, [categorySlug, label, slug]);
 
   const image = post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Footer, Header, ScrollToTop } from "../Index";
-
-const WORDPRESS_API = "https://www.lander.vivirgros.com/wp-json/wp/v2";
+import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
 
 const Insights = () => {
   const [posts, setPosts] = useState([]);
@@ -10,18 +9,11 @@ const Insights = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const loadPosts = async () => {
       try {
-        const categoryResponse = await fetch(
-          `${WORDPRESS_API}/categories?slug=samdoghor`
-        );
-
-        if (!categoryResponse.ok) {
-          throw new Error("Unable to find the insights category.");
-        }
-
-        const categories = await categoryResponse.json();
-        const category = categories[0];
+        const category = await getWordPressCategory("samdoghor", controller.signal);
 
         if (!category) {
           setPosts([]);
@@ -29,7 +21,8 @@ const Insights = () => {
         }
 
         const postsResponse = await fetch(
-          `${WORDPRESS_API}/posts?categories=${category.id}&_embed&per_page=20`
+          `${WORDPRESS_API_URL}/posts?categories=${category.id}&_embed&per_page=20&_fields=id,date,title,excerpt,slug,_embedded`,
+          { signal: controller.signal }
         );
 
         if (!postsResponse.ok) {
@@ -38,6 +31,10 @@ const Insights = () => {
 
         setPosts(await postsResponse.json());
       } catch (fetchError) {
+        if (fetchError.name === "AbortError") {
+          return;
+        }
+
         setError(fetchError.message);
       } finally {
         setIsLoading(false);
@@ -45,6 +42,8 @@ const Insights = () => {
     };
 
     loadPosts();
+
+    return () => controller.abort();
   }, []);
 
   return (

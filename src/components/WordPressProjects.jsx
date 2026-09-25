@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
+import { getWordPressCategory, getWordPressPostsByCategory } from "../wordpressApi";
 
 const WordPressProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -21,16 +21,13 @@ const WordPressProjects = () => {
           return;
         }
 
-        const postsResponse = await fetch(
-          `${WORDPRESS_API_URL}/posts?categories=${category.id}&_embed&per_page=20&_fields=id,title,excerpt,slug,_embedded`,
-          { signal: controller.signal }
+        setProjects(
+          await getWordPressPostsByCategory(
+            category.id,
+            "id,title,excerpt,slug,_links,_embedded",
+            controller.signal,
+          ),
         );
-
-        if (!postsResponse.ok) {
-          throw new Error("Unable to load projects.");
-        }
-
-        setProjects(await postsResponse.json());
       } catch (fetchError) {
         if (fetchError.name === "AbortError") {
           return;

@@ -1,5 +1,5 @@
 import MaintenanceMode from "../components/MaintenanceMode";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Footer, Header, ScrollToTop } from "../Index";
 
 const Courses = () => {

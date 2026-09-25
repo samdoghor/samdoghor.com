@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 import { Footer, Header, ScrollToTop } from "../Index";
 import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";

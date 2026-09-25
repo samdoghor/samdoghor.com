@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import PortfolioComponent from "../components/PortfolioComponent";
 import { projectCMS } from "../constants";
 import { Footer, Header, ScrollToTop } from "../Index";

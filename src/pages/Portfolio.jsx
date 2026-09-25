@@ -1,4 +1,4 @@
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Contact, Footer, Header, Hero, Project, ScrollToTop, Service, SpotifySection, Technologies } from "../Index";
 
 const Portfolio = () => {

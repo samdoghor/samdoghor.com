@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Footer, Header, ScrollToTop } from "../Index";
 import { getWordPressCategory, getWordPressPostsByCategory } from "../wordpressApi";
 

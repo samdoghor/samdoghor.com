@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { ScrollToTop } from "../Index";
 import { FaCalendarCheck, FaClock } from "react-icons/fa";
 import { Button } from "flowbite-react";

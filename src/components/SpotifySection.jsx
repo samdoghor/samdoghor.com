@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 
 const LASTFM_API = "https://ws.audioscrobbler.com/2.0/";
 const LASTFM_USER = "samdoghor";
+const REQUEST_TIMEOUT_MS = 8000;
+const NETWORK_BLOCKED_MESSAGE =
+  "Unable to load listening history - it looks like your network is blocking access to streaming platforms.";
 
 const TrackList = ({ tracks, emptyLabel }) => {
   if (!tracks.length) {
@@ -67,10 +70,17 @@ const SpotifySection = () => {
           limit: "20",
           ...params,
         });
-        return fetch(`${LASTFM_API}?${query}`).then((response) => {
-          if (!response.ok) throw new Error("Unable to load listening data.");
-          return response.json();
-        });
+        const timeoutController = new AbortController();
+        const timeoutId = setTimeout(
+          () => timeoutController.abort(),
+          REQUEST_TIMEOUT_MS,
+        );
+        return fetch(`${LASTFM_API}?${query}`, { signal: timeoutController.signal })
+          .then((response) => {
+            if (!response.ok) throw new Error("Unable to load listening data.");
+            return response.json();
+          })
+          .finally(() => clearTimeout(timeoutId));
       };
 
       try {
@@ -91,7 +101,10 @@ const SpotifySection = () => {
           top: topResponse.toptracks?.track?.slice(0, 10) || [],
         });
       } catch (fetchError) {
-        setError(fetchError.message);
+        // Blocked/unreachable requests surface as a generic TypeError or an abort from our timeout.
+        const isNetworkBlocked =
+          fetchError.name === "AbortError" || fetchError instanceof TypeError;
+        setError(isNetworkBlocked ? NETWORK_BLOCKED_MESSAGE : fetchError.message);
       } finally {
         setIsLoading(false);
       }

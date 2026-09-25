@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Footer, Header, ScrollToTop } from "../Index";
-import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
+import { getWordPressCategory, getWordPressPostsByCategory } from "../wordpressApi";
 
 const Insights = () => {
   const [posts, setPosts] = useState([]);
@@ -20,16 +20,13 @@ const Insights = () => {
           return;
         }
 
-        const postsResponse = await fetch(
-          `${WORDPRESS_API_URL}/posts?categories=${category.id}&_embed&per_page=20&_fields=id,date,title,excerpt,slug,_embedded`,
-          { signal: controller.signal }
+        setPosts(
+          await getWordPressPostsByCategory(
+            category.id,
+            "id,date,title,excerpt,slug,_links,_embedded",
+            controller.signal,
+          ),
         );
-
-        if (!postsResponse.ok) {
-          throw new Error("Unable to load insight posts.");
-        }
-
-        setPosts(await postsResponse.json());
       } catch (fetchError) {
         if (fetchError.name === "AbortError") {
           return;

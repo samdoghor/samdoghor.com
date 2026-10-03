@@ -1,8 +1,18 @@
 import { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Footer, Header, ScrollToTop } from "../Index";
 import { marketplaceProducts } from "../marketplaceProducts";
+import { createPageMeta } from "../seo";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function meta() {
+  return createPageMeta(
+    "Marketplace | Samuel Doghor",
+    "Browse practical software, design, and engineering resources from Samuel Doghor.",
+    "/marketplace",
+  );
+}
 
 const PRODUCTS_PER_PAGE = 6;
 
@@ -58,6 +68,7 @@ ProductMedia.propTypes = {
 };
 
 const Marketplace = () => {
+  const location = useLocation();
   const [message, setMessage] = useState("");
   const [download, setDownload] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -77,7 +88,7 @@ const Marketplace = () => {
   };
 
   const requestDownload = async () => {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     const productId = params.get("productId");
     const reference = params.get("reference");
     if (!productId || !reference) return;
@@ -108,12 +119,11 @@ const Marketplace = () => {
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   const visibleProducts = filteredProducts.slice((page - 1) * PRODUCTS_PER_PAGE, page * PRODUCTS_PER_PAGE);
   const updateListing = (setter) => (event) => { setter(event.target.value); setPage(1); };
-  const hasPayment = new URLSearchParams(window.location.search).has("reference");
+  const hasPayment = new URLSearchParams(location.search).has("reference");
 
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Header />
-      <Helmet><title>Marketplace | Samuel Doghor</title></Helmet>
       <main className="mx-auto w-full max-w-6xl px-6 pb-10 pt-32 md:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-300">Marketplace</p>
         <h1 className="mt-4 text-5xl font-black text-slate-900 dark:text-white md:text-6xl">Digital tools and design assets.</h1>

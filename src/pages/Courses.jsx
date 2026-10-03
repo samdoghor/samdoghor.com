@@ -1,6 +1,15 @@
 import MaintenanceMode from "../components/MaintenanceMode";
-import { Helmet } from "react-helmet-async";
 import { Footer, Header, ScrollToTop } from "../Index";
+import { createPageMeta } from "../seo";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function meta() {
+  return createPageMeta(
+    "Courses | Samuel Doghor",
+    "Software engineering courses and learning resources from Samuel Doghor.",
+    "/courses",
+  );
+}
 
 const Courses = () => {
   return (
@@ -10,24 +19,6 @@ const Courses = () => {
         style={{ zIndex: 2 }} // Set z-index to 1 for the main container
       >
         <Header />
-        <div>
-          <Helmet>
-            <title> Courses | Samuel Doghor </title>
-
-            <meta property="title" content="Courses | Samuel Doghor" />
-            <meta property="og:title" content="Courses | Samuel Doghor" />
-            <meta
-              property="description"
-              content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences."
-            />
-            <meta
-              property="og:description"
-              content="Software Engineer skilled in scalable architecture for accessible digital systems and interfaces, passionate about seamless user experiences"
-            />
-            <meta property="image" content="/img/doghs.jpg" />
-            <meta property="og:image" content="/img/doghs.jpg" />
-          </Helmet>
-        </div>
         <MaintenanceMode
           pagetitle="Courses Page"
           expectedCompletion="Monday, 3rd March, 2025"

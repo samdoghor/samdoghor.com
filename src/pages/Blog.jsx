@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { Footer, Header, ScrollToTop } from "../Index";
 import { getWordPressCategory, getWordPressPostsByCategory } from "../wordpressApi";
+import { createPageMeta } from "../seo";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function meta() {
+  return createPageMeta(
+    "Insights | Samuel Doghor",
+    "Insights, knowledge, and news from Samuel Doghor.",
+    "/insights",
+  );
+}
 
 const Insights = () => {
   const [posts, setPosts] = useState([]);
@@ -46,16 +55,6 @@ const Insights = () => {
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Header />
-      <Helmet>
-        <title>Insights | Samuel Doghor</title>
-        <meta property="title" content="Insights | Samuel Doghor" />
-        <meta property="og:title" content="Insights | Samuel Doghor" />
-        <meta property="description" content="Insights, knowledge, and news from Samuel Doghor." />
-        <meta property="og:description" content="Insights, knowledge, and news from Samuel Doghor." />
-        <meta property="image" content="/img/doghs.jpg" />
-        <meta property="og:image" content="/img/doghs.jpg" />
-      </Helmet>
-
       <main className="mx-auto w-full max-w-6xl px-6 pb-10 pt-32 md:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-300">
           Insights

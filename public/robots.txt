@@ -1,0 +1,7 @@
+# robots.txt for https://www.samdoghor.com
+# Welcome all crawlers (search engines and AI answer engines)
+ 
+User-agent: *
+Allow: /
+ 
+Sitemap: https://www.samdoghor.com/sitemap.xml

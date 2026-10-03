@@ -37,7 +37,10 @@ const getCachedPosts = (cacheKey) => {
 
 const cachePosts = (cacheKey, posts) => {
   try {
-    sessionStorage.setItem(`${POSTS_CACHE_PREFIX}${cacheKey}`, JSON.stringify(posts));
+    sessionStorage.setItem(
+      `${POSTS_CACHE_PREFIX}${cacheKey}`,
+      JSON.stringify(posts),
+    );
   } catch {
     // Session storage can be unavailable in restricted browser contexts.
   }
@@ -73,8 +76,9 @@ export const getWordPressPostsByCategory = async (
   categoryId,
   fields,
   signal,
+  embed = "wp:featuredmedia",
 ) => {
-  const cacheKey = `${categoryId}:${fields}`;
+  const cacheKey = `${categoryId}:${embed}:${fields}`;
   const cachedPosts = getCachedPosts(cacheKey);
 
   if (cachedPosts) {
@@ -82,7 +86,7 @@ export const getWordPressPostsByCategory = async (
   }
 
   const response = await fetch(
-    `${WORDPRESS_API}/posts?categories=${categoryId}&_embed=wp:featuredmedia&per_page=20&_fields=${fields}`,
+    `${WORDPRESS_API}/posts?categories=${categoryId}&_embed=${embed}&per_page=20&_fields=${fields}`,
     { signal },
   );
 

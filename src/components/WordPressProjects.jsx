@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
 import { getWordPressCategory, getWordPressPostsByCategory } from "../wordpressApi";
 
+const projectFilters = ["Software Development", "Engineering Design"];
+
+const getProjectTerms = (project) =>
+  (project._embedded?.["wp:term"] ?? [])
+    .flat()
+    .filter((term) => term.slug !== "samdoghor-projects");
+
 const WordPressProjects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -24,8 +32,9 @@ const WordPressProjects = () => {
         setProjects(
           await getWordPressPostsByCategory(
             category.id,
-            "id,title,excerpt,slug,_links,_embedded",
+            "id,title,excerpt,slug,categories,_links,_embedded",
             controller.signal,
+            "wp:featuredmedia,wp:term",
           ),
         );
       } catch (fetchError) {
@@ -60,10 +69,41 @@ const WordPressProjects = () => {
     );
   }
 
+  const visibleProjects = projects.filter((project) =>
+    activeFilter === "All" ||
+    getProjectTerms(project).some(
+      (term) => term.name.toLowerCase() === activeFilter.toLowerCase(),
+    ),
+  );
+
   return (
-    <div className="mt-10 grid gap-8">
-      {projects.map((project) => {
+    <>
+      <div className="mt-10 flex flex-wrap gap-3" aria-label="Filter projects">
+        {["All", ...projectFilters].map((filter) => (
+          <button
+            key={filter}
+            type="button"
+            aria-pressed={activeFilter === filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+              activeFilter === filter
+                ? "border-cyan-600 bg-cyan-600 text-white dark:border-cyan-300 dark:bg-cyan-300 dark:text-slate-950"
+                : "border-slate-200 text-slate-600 hover:border-cyan-500 hover:text-cyan-600 dark:border-white/20 dark:text-slate-200 dark:hover:border-cyan-300 dark:hover:text-cyan-300"
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+      {visibleProjects.length === 0 ? (
+        <p className="mt-8 text-slate-500 dark:text-slate-400">
+          No projects found in this category.
+        </p>
+      ) : (
+        <div className="mt-8 grid gap-8">
+          {visibleProjects.map((project) => {
         const image = project._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+        const terms = getProjectTerms(project);
 
         return (
           <article
@@ -88,6 +128,18 @@ const WordPressProjects = () => {
               >
                 View project
               </a>
+              {terms.length > 0 ? (
+                <ul className="mt-4 flex flex-wrap gap-2" aria-label="Project tags">
+                  {terms.map((term) => (
+                    <li
+                      key={`${term.taxonomy}-${term.id}`}
+                      className="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/20 dark:text-slate-300"
+                    >
+                      {term.name}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
             {image ? (
               <img
@@ -98,8 +150,10 @@ const WordPressProjects = () => {
             ) : null}
           </article>
         );
-      })}
-    </div>
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

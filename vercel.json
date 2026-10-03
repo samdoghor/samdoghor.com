@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "build/client",
   "rewrites": [{ "source": "/(.*)", "destination": "/__spa-fallback.html" }],
   "redirects": [
     {

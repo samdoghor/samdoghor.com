@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { ArrowLeft } from "lucide-react";
 import PropTypes from "prop-types";
 import { Footer, Header, ScrollToTop } from "../Index";
 import { getWordPressCategory, WORDPRESS_API_URL } from "../wordpressApi";
@@ -15,6 +16,10 @@ const WordPressPost = ({ categorySlug, label }) => {
     const controller = new AbortController();
 
     const loadPost = async () => {
+      setIsLoading(true);
+      setError("");
+      setPost(null);
+
       try {
         const category = await getWordPressCategory(categorySlug, controller.signal);
 
@@ -23,7 +28,7 @@ const WordPressPost = ({ categorySlug, label }) => {
         }
 
         const postResponse = await fetch(
-          `${WORDPRESS_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed&_fields=id,date,title,content,categories,_embedded`,
+          `${WORDPRESS_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed=wp:featuredmedia,wp:term&_fields=id,date,title,content,categories,tags,_links,_embedded`,
           { signal: controller.signal }
         );
 
@@ -48,7 +53,9 @@ const WordPressPost = ({ categorySlug, label }) => {
 
         setError(fetchError.message);
       } finally {
-        setIsLoading(false);
+        if (!controller.signal.aborted) {
+          setIsLoading(false);
+        }
       }
     };
 
@@ -58,6 +65,9 @@ const WordPressPost = ({ categorySlug, label }) => {
   }, [categorySlug, label, slug]);
 
   const image = post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+  const tags = (post?._embedded?.["wp:term"] ?? [])
+    .flat()
+    .filter((term) => term.taxonomy === "post_tag");
 
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
@@ -66,23 +76,45 @@ const WordPressPost = ({ categorySlug, label }) => {
         <title>{post ? `${post.title.rendered} | Samuel Doghor` : `${label} | Samuel Doghor`}</title>
       </Helmet>
       <main className="mx-auto w-full max-w-4xl px-6 pb-10 pt-32 md:px-8">
+        {label === "Project" ? (
+          <Link
+            to="/#projects"
+            className="mb-8 inline-flex items-center gap-2 font-semibold text-cyan-600 transition hover:text-cyan-500 dark:text-cyan-300 dark:hover:text-cyan-200"
+          >
+            <ArrowLeft size={18} aria-hidden="true" />
+            Back to projects
+          </Link>
+        ) : null}
         {isLoading ? (
           <p className="text-slate-500 dark:text-slate-400">Loading {label.toLowerCase()}...</p>
         ) : error ? (
           <p className="text-red-600 dark:text-red-400">{error}</p>
+        ) : !post ? (
+          <p className="text-slate-500 dark:text-slate-400">
+            Unable to display this {label.toLowerCase()} right now.
+          </p>
         ) : (
           <article>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-300">
               {label}
             </p>
             <h1
-              className="mt-4 max-w-3xl font-genos text-5xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white md:text-7xl"
+              className="mt-4 max-w-3xl font-genos text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-white md:text-5xl"
               dangerouslySetInnerHTML={{ __html: post.title.rendered }}
             />
-            <p className="mt-5 text-sm text-slate-500 dark:text-slate-400">
-              {new Date(post.date).toLocaleDateString()}
-            </p>
-            {image ? (
+            {tags.length > 0 ? (
+              <ul className="mt-5 flex flex-wrap gap-2" aria-label="Project tags">
+                {tags.map((tag) => (
+                  <li
+                    key={tag.id}
+                    className="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/20 dark:text-slate-300"
+                  >
+                    {tag.name}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {label !== "Project" && image ? (
               <img className="mt-10 max-h-[32rem] w-full rounded-2xl object-cover" src={image} alt="" />
             ) : null}
             <div

@@ -82,10 +82,10 @@ export const ServiceData = [
 ];
 
 export const ServiceStatsData = [
-  { id: 1, value: "05+", label: "Years Building Solutions" },
+  { id: 1, value: "06+", label: "Years Building Solutions" },
   { id: 2, value: "20+", label: "Projects Delivered" },
   { id: 3, value: "02", label: "Career Tracks" },
-  { id: 4, value: "04+", label: "Companies Collaborated" },
+  { id: 4, value: "03+", label: "Companies worked as Employee" },
 ];
 
 export const TestimoniesData = [{ id: 1 }];
@@ -94,7 +94,7 @@ export const ProjectData = [
   {
     id: 1,
     text: "Featured Work",
-    subtitle: "A selection of software and engineering projects.",
+    subtitle: "A selection of software and engineering projects, delivered independently (alone or with my team) as personal side work or through my own company Vivirgros.",
   },
 ];
 

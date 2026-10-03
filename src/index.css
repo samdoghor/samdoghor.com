@@ -131,6 +131,50 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
 }
 
+.wordpress-content figure.wp-block-table {
+  margin: 2rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wordpress-content figure.wp-block-table table {
+  border-collapse: collapse;
+  min-width: 36rem;
+  table-layout: auto;
+  width: 100%;
+}
+
+.wordpress-content figure.wp-block-table th,
+.wordpress-content figure.wp-block-table td {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.7rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wordpress-content figure.wp-block-table thead th {
+  background: rgba(148, 163, 184, 0.12);
+  color: #f8fafc;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.wordpress-content figure.wp-block-table tbody td:first-child {
+  color: #f8fafc;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.wordpress-content figure.wp-block-table .has-text-align-center {
+  text-align: center;
+}
+
+.wordpress-content figure.wp-block-table .has-text-align-right {
+  text-align: right;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
